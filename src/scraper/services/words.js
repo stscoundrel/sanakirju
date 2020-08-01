@@ -11,10 +11,14 @@ const getWords = async (letter, page) => {
 
     const wordList = Array.from(document.querySelectorAll('#hsanakonteksti a'))
 
+    // Remove first & last -> they are navigations.
+    wordList.shift()
+    wordList.pop()
+
     wordList.forEach( link => {
-      //if( link.innerHTML.startsWith(letter) ) {
+      if( link.innerHTML.toUpperCase().startsWith(letter) ) {
         wordLinks.push(link.href)
-      //}
+      }
     })
 
     return wordLinks
