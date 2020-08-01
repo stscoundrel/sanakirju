@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer')
 const constants = require('../../constants/scraper.js')
-const letters = require('./letters.js')
 const words = require('./words.js')
 
 const { DICTIONARY_URL } = constants
@@ -11,7 +10,7 @@ const { DICTIONARY_URL } = constants
  * browser & page instances.
  */
 const getBrowser = async () => {
-  const browser = await puppeteer.launch({headless: true,slowMo: 250})
+  const browser = await puppeteer.launch({headless: false,slowMo: 250})
   const page = await browser.newPage()
 
   await page.goto(DICTIONARY_URL)
@@ -31,16 +30,7 @@ const closeBrowser = async (browser) => {
  * Get words by letter.
  * Scraper dictionary page for each word & definition.
  */
-const getWordsByLetter = async (letter, page) => {
-  await page.waitForSelector('.aakkoslista')
-
-  // Get proper letter to click.
-  const letterLink = await letters.getLetterLink(letter, page)
-
-  // Go to filtered page.
-  await page.goto(letterLink)
-  await page.waitFor(500) // TODO: listener for action?
-
+const scrapeWords = async (letter, page) => {
   // Get individual words
   const wordlist = await words.getWords(letter, page)
 
@@ -50,5 +40,5 @@ const getWordsByLetter = async (letter, page) => {
 module.exports = {
   getBrowser,
   closeBrowser,
-  getWordsByLetter
+  scrapeWords
 }

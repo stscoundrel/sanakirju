@@ -1,8 +1,10 @@
 const DICTIONARY_URL = 'http://kaino.kotus.fi/cgi-bin/kks/karjala.cgi'
-const LETTERS = ['A', 'E', 'F', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-  'O', 'P', 'R', 'S', 'T', 'U', 'V', 'Y', 'Ä', 'Ö']
+const WORDS_LINKS_DOM = {
+	LIST: '#hsanakonteksti a',
+	LOAD_MORE: '#hsanakonteksti a:last-of-type'
+}
 
 module.exports = {
   DICTIONARY_URL,
-  LETTERS,
+  WORDS_LINKS_DOM
 }

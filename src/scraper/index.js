@@ -1,18 +1,11 @@
-const scraperService = require('./services/scrape.js')
-const letterService = require('./services/letters.js')
+const scraper = require('./services/scrape.js')
 
 const scrape = async () => {
   const results = []
 
-  const {browser, page} = await scraperService.getBrowser()
-  //const letters = letterService.getLetters()
-  const letters = ['E']
-
-  await letters.forEach( async letter => {
-    const words = await scraperService.getWordsByLetter(letter, page)
-
-    results.push(words)
-  })
+  const {browser, page} = await scraper.getBrowser()
+  
+  const words = await scraper.scrapeWords(page)    
 
   // scraperService.closeBrowser(browser)
 
