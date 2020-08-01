@@ -19,6 +19,7 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "scripts": {
+    "start": "node sanakirju.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
