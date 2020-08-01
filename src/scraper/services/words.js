@@ -1,6 +1,6 @@
 const constants = require('../../constants/scraper.js')
 
-const { LIST, LOADMORE } = constants.WORDS_LINKS_DOM
+const { LIST, LOAD_MORE } = constants.WORDS_LINKS_DOM
 
 /**
  * Get words in sidebar list.
@@ -27,8 +27,8 @@ const getWords = async (page) => {
       }
     }
 
-    await page.click('#hsanakonteksti a:last-of-type')
-    await page.waitFor(1500)
+    await page.click(LOAD_MORE)
+    await page.waitFor(500)
 
   }
 
@@ -36,10 +36,10 @@ const getWords = async (page) => {
 }
 
 const getVisibleWords = async (page) => {
-  const words = await page.evaluate( () => {
+  const words = await page.evaluate( (LIST) => {
     const words = []
 
-    const wordList = Array.from(document.querySelectorAll('#hsanakonteksti a'))
+    const wordList = Array.from(document.querySelectorAll(LIST))
 
     // Remove first & last -> they are navigations.
     wordList.shift()
@@ -51,7 +51,7 @@ const getVisibleWords = async (page) => {
     })
 
     return words
-  })
+  }, LIST)
 
   return words
 }
