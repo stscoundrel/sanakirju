@@ -36,11 +36,11 @@ const getWordsByLetter = async (letter, page) => {
 
   // Get proper letter to click.
   const letterLink = await letters.getLetterLink(letter, page)
-  
+
   // Go to filtered page.
-  page.goto(letterLink)
-  page.waitForNavigation()
-  
+  await page.goto(letterLink)
+  await page.waitFor(500) // TODO: listener for action?
+
   // Get individual words
   const wordlist = await words.getWords(letter, page)
 
