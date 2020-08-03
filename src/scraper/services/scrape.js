@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer')
 const constants = require('../../constants/scraper.js')
-const words = require('./wordlist.js')
 
 const { DICTIONARY_URL } = constants
 
@@ -22,19 +21,8 @@ const getBrowser = async () => {
  */
 const closeBrowser = async (browser) => browser.close()
 
-/**
- * Get words by letter.
- * Scraper dictionary page for each word & definition.
- */
-const scrapeWords = async (letter, page) => {
-  // Get individual words
-  const wordlist = await words.getWords(letter, page)
-
-  console.log(wordlist)
-}
 
 module.exports = {
   getBrowser,
   closeBrowser,
-  scrapeWords,
 }
