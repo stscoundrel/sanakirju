@@ -1,6 +1,29 @@
 const constants = require('../../constants/scraper.js')
+const utils = require('../../utils/utils')
 
 const { LIST, LOAD_MORE } = constants.WORDS_LINKS_DOM
+
+/**
+ * Get definitions for array of links.
+ */
+ const getDefinitionsFromLinks = async (links, browser) => {
+   // Split results into smaller chunks.
+  const wordLists = utils.chunkArray(links, 5)
+
+  // Get words from individual chunks.
+  const definitions = []
+
+  for (let i = 0; i < wordLists.length; i++) {
+    definitions.push( await getWordsInArray(wordLists[i], browser) )
+  }
+
+  const result = await Promise.all(definitions)
+
+  // Turn into single dimension array.
+  const data = result.reduce( (a, b) => a.concat(b))
+
+  return data
+ }
 
 /**
  * Get definitions for array of urls.
@@ -21,7 +44,7 @@ const getWordsInArray = async (words, browser) => {
  * --> Scrape data.
  */
 const getDefinition = async (wordUrl, browser) => {
-  
+
   const result = new Promise( async (resolve, reject) => {
     const page = await browser.newPage()
 
@@ -55,6 +78,7 @@ const getDefinition = async (wordUrl, browser) => {
 
 
 module.exports = {
+  getDefinitionsFromLinks,
   getWordsInArray,
   getDefinition,
 }
