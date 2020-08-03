@@ -3,12 +3,12 @@ const constants = require('../../constants/scraper.js')
 const { LIST, LOAD_MORE } = constants.WORDS_LINKS_DOM
 
 /**
- * Get words in sidebar list.
+ * Get word links in sidebar list.
  * --> Get all visible words.
  * --> Click 'load more'
  * --> If new words, keep fetching.
  */
-const getWords = async (page) => {
+const getWordLinks = async (page) => {
   let allWords = []
   let isDone = false
 
@@ -74,5 +74,5 @@ const getVisibleWords = async (page) => {
 }
 
 module.exports = {
-  getWords,
+  getWordLinks,
 }
