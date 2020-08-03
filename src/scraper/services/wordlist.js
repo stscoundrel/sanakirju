@@ -14,25 +14,43 @@ const getWords = async (page) => {
 
   while( ! isDone ) {
     const words = await getVisibleWords(page)
-    console.log(words)
+
     // Initialize main array if empty.
-    if( allWords.length === 0 ) {
-      allWords = words
-    } else {
-      if( allWords[ allWords.length -1 ] !== words[ words.length -1 ] ) {
-        allWords = allWords.concat(words)
-      } else {
-        isDone = true
-        break
-      }
+    if( allWords.length === 0 ) allWords = words
+    
+    // Check if whole list is handled.
+    if( isFinalEntry( allWords, words ) ) {
+      isDone = true
+      break
     }
 
+    // Append found words to main arr.
+    allWords = allWords.concat(words)    
+
+    // Load new set.
     await page.click(LOAD_MORE)
     await page.waitFor(500)
 
   }
 
   return allWords
+}
+
+/**
+ * Check if is final entry.
+ * Final:
+ * -> same last word in both arrays.
+ * -> not equal size eg. not first entry.
+ */
+const isFinalEntry = (previous, next) => {
+  const hasSameLast = previous[ previous.length -1 ] === next[ next.length -1 ]
+  const isNotFirstRound = previous.length !== next.length
+
+  if( hasSameLast && isNotFirstRound ) {
+    return true
+  }
+
+  return false
 }
 
 const getVisibleWords = async (page) => {

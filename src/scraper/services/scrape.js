@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 const constants = require('../../constants/scraper.js')
-const words = require('./words.js')
+const words = require('./wordlist.js')
 
 const { DICTIONARY_URL } = constants
 
