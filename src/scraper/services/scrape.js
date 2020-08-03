@@ -4,27 +4,23 @@ const words = require('./wordlist.js')
 
 const { DICTIONARY_URL } = constants
 
-
 /**
  * Bootstrap Puppeteer
  * browser & page instances.
  */
 const getBrowser = async () => {
-  const browser = await puppeteer.launch({headless: false,slowMo: 250})
+  const browser = await puppeteer.launch({ headless: false, slowMo: 250 })
   const page = await browser.newPage()
 
   await page.goto(DICTIONARY_URL)
 
-  return {browser, page};
+  return { browser, page };
 }
 
 /**
  * Close puppeteer browser.
  */
-const closeBrowser = async (browser) => {
-  return await browser.close()
-}
-
+const closeBrowser = async (browser) => browser.close()
 
 /**
  * Get words by letter.
@@ -40,5 +36,5 @@ const scrapeWords = async (letter, page) => {
 module.exports = {
   getBrowser,
   closeBrowser,
-  scrapeWords
+  scrapeWords,
 }

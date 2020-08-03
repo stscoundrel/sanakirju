@@ -1,7 +1,7 @@
 const scrape = require('./src/scraper')
 
 const scraper = async () => {
-  result = await scrape()
+  const result = await scrape()
 
   console.log(result)
 }
