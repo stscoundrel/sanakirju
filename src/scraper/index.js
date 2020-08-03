@@ -38,17 +38,18 @@ const scrape = async () => {
   const chunkedWordList = utils.chunkArray(wordLinks, 5)
 
   // Get words from individual chunks.
-  const result = results.concat( await Promise.all(
-      chunkedWordList.map(async (wordChunk) => {
-        const definitions = await words.getWordsInArray(wordChunk, browser)
-        return definitions
-      })
-    )
-  )
+  const definitions = []
 
-  const definitions = result.reduce( (a, b) => a.concat(b))
+  for (let i = 0; i < chunkedWordList.length; i++) {
+    definitions.push( await words.getWordsInArray(chunkedWordList[i], browser) )
+  }
 
-  console.log(definitions)  
+  const result = await Promise.all(definitions)
+  
+
+  const data = result.reduce( (a, b) => a.concat(b))
+
+  console.log(data)  
 
   scraper.closeBrowser(browser)
 
