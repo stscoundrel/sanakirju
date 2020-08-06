@@ -21,7 +21,6 @@ const getBrowser = async () => {
  */
 const closeBrowser = async (browser) => browser.close()
 
-
 module.exports = {
   getBrowser,
   closeBrowser,
