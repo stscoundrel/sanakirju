@@ -1,9 +1,10 @@
-const fs = require('fs')
-const xml2js = require('xml2js')
 const filesService = require('./services/files.js')
+const xmlService = require('./services/xml.js')
 
 const xmlReader = async () => {
   const files = filesService.getAll()
+
+  const words = await xmlService.readFiles(files)
 
   // const parser = new xml2js.Parser()
 
@@ -13,10 +14,8 @@ const xmlReader = async () => {
   //       //console.log('Done')
   //   });
   // });
-
-  console.log(files)
-
-  return files
+  
+  return words
 }
 
 module.exports = xmlReader

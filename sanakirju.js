@@ -8,7 +8,7 @@ const scraper = async () => {
 }
 
 const fromXML = async () => {
-  const result = xmlReader()
+  const result = await xmlReader()
 
   console.log(result)
 

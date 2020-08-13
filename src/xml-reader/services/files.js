@@ -21,7 +21,7 @@ const getFromFolder = (folder) => {
   const files = []
 
   fs.readdirSync(`${__dirname}/../xml/kksxml/${folder}/`).forEach((file) => {
-    files.push(file)
+    files.push(`${folder}/${file}`)
   })
 
   return files
