@@ -29,7 +29,7 @@ const getWordLinks = async (page) => {
 
     // Load new set.
     await page.click(LOAD_MORE)
-    await page.waitFor(500)
+    await page.waitFor(1000)
   }
 
   return allWords
@@ -63,7 +63,6 @@ const getVisibleWords = async (page) => {
     wordList.pop().href
 
     wordList.forEach((link) => {
-      console.log(link.innerHTML)
       words.push(link.href)
     })
 

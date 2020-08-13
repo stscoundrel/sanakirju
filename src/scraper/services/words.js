@@ -2,13 +2,14 @@ const constants = require('../../constants/scraper.js')
 const utils = require('../../utils/utils')
 
 const { LIST, LOAD_MORE } = constants.WORDS_LINKS_DOM
+const { CONCURRENT_DEFS } = constants
 
 /**
  * Get definitions for array of links.
  */
 const getDefinitionsFromLinks = async (links, browser) => {
   // Split results into smaller chunks.
-  const wordLists = utils.chunkArray(links, 5)
+  const wordLists = utils.chunkArray(links, CONCURRENT_DEFS)
 
   // Get words from individual chunks.
   const definitions = []

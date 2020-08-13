@@ -1,14 +1,14 @@
 const puppeteer = require('puppeteer')
 const constants = require('../../constants/scraper.js')
 
-const { DICTIONARY_URL } = constants
+const { DICTIONARY_URL, PUPPETEER_CONF } = constants
 
 /**
  * Bootstrap Puppeteer
  * browser & page instances.
  */
 const getBrowser = async () => {
-  const browser = await puppeteer.launch({ headless: false, slowMo: 250 })
+  const browser = await puppeteer.launch(PUPPETEER_CONF)
   const page = await browser.newPage()
 
   await page.goto(DICTIONARY_URL)
