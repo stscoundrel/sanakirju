@@ -10,7 +10,12 @@ const scraper = async () => {
 const fromXML = async () => {
   const result = await xmlReader()
 
+  // console.log(result[0].SenseGrp)
+
+  // console.log( result.forEach(result => result.definitions.forEach(def => console.log(result.word, def))) )
+
   console.log(result)
+
 
   return result
 }
