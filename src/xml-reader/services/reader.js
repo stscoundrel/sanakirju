@@ -1,13 +1,11 @@
 const xml2js = require('xml2js')
 const fs = require('fs')
 const util = require('util')
+const wordService = require('./words.js')
 
 // Promisify xml reader.
 const readFile = util.promisify(fs.readFile)
 xml2js.parseStringPromise = util.promisify(xml2js.parseString);
-
-
-const { XML_FOLDERS } = require('../../constants/xml.js')
 
 /**
  * Get json from list of xml files
@@ -43,7 +41,7 @@ const getFileContent = async (filePath) => {
 
     const data = await parser.parseStringPromise(content)  
 
-    const words = formatEntries(data.Dictionary.DictionaryEntry)
+    const words = wordService.formatEntries(data.Dictionary.DictionaryEntry)
 
     return words
  }
