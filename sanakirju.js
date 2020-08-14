@@ -1,3 +1,4 @@
+const util = require('util')
 const scrape = require('./src/scraper')
 const xmlReader = require('./src/xml-reader')
 
@@ -12,10 +13,11 @@ const fromXML = async () => {
 
   // console.log(result[0].SenseGrp)
 
-  // console.log( result.forEach(result => result.definitions.forEach(def => console.log(result.word, def))) )
+  // result.forEach(result => result.definitions.forEach(def => console.log(def.examples)) )
 
-  console.log(result)
+  // console.log(result)
 
+  console.log(util.inspect(result, false, null))
 
   return result
 }

@@ -48,8 +48,7 @@ const getDefinition = (entry) => ({
   definition: getMeaning(entry),
   type: getType(entry),
   grammaticalNote: getGrammaticalNote(entry),
-  // GrammaticalNote: data.GrammaticalNote,
-  // Definition: data.Definition
+  examples: getExamples(entry),
 })
 
 /**
@@ -88,7 +87,7 @@ const getMeaning = (entry) => {
 
   if (data.hasOwnProperty('Definition')) {
     if (typeof data.Definition === 'object') {
-      if( data.Definition[0].hasOwnProperty('_') ) {
+      if (data.Definition[0].hasOwnProperty('_')) {
         return data.Definition[0]._
       }
 
@@ -138,6 +137,27 @@ const getGrammaticalNote = (entry) => {
 
   if (data.hasOwnProperty('GrammaticalNote')) {
     return data.GrammaticalNote[0]._
+  }
+
+  return null
+}
+
+/**
+ * Get examples from entry.
+ */
+const getExamples = (entry) => {
+  let data
+
+  if (entry.hasOwnProperty('HeadwordCtn')) {
+    data = entry.HeadwordCtn[0]
+  } else {
+    data = entry
+  }
+
+  if (data.hasOwnProperty('ExampleBlock')) {
+    if (Array.isArray(data.ExampleBlock)) {
+      return data.ExampleBlock.map((example) => example.ExampleCtn[0].Example)
+    }
   }
 
   return null
