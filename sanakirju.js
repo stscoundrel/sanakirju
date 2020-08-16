@@ -1,4 +1,6 @@
+const util = require('util')
 const scrape = require('./src/scraper')
+const xmlReader = require('./src/xml-reader')
 
 const scraper = async () => {
   const result = await scrape()
@@ -6,4 +8,12 @@ const scraper = async () => {
   return result;
 }
 
-scraper()
+const fromXML = async () => {
+  const result = await xmlReader()
+
+  // console.log(util.inspect(result, false, null))
+
+  return result
+}
+
+fromXML()

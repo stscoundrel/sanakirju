@@ -8,13 +8,13 @@ const WORDS_LINKS_DOM = {
 const CONCURRENT_DEFS = 10
 
 const PUPPETEER_CONF = {
-	headless: false,
-	slowMo: 250
+  headless: false,
+  slowMo: 250,
 }
 
 module.exports = {
   DICTIONARY_URL,
   WORDS_LINKS_DOM,
   CONCURRENT_DEFS,
-  PUPPETEER_CONF
+  PUPPETEER_CONF,
 }
