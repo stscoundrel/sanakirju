@@ -176,7 +176,7 @@ const getExamples = (entry) => {
     }
   }
 
-  return null
+  return []
 }
 
 /**
