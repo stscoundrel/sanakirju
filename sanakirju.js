@@ -11,13 +11,7 @@ const scraper = async () => {
 const fromXML = async () => {
   const result = await xmlReader()
 
-  // console.log(result[0].SenseGrp)
-
-  // result.forEach(result => result.definitions.forEach(def => console.log(def.examples)) )
-
-  // console.log(result)
-
-  console.log(util.inspect(result, false, null))
+  // console.log(util.inspect(result, false, null))
 
   return result
 }

@@ -7,6 +7,9 @@ const formatEntries = (data) => {
   return words
 }
 
+/**
+ * Format individual entry.
+ */
 const formatEntry = (entry) => {
   const word = {
     word: getWord(entry),
