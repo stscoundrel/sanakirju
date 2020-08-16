@@ -156,11 +156,36 @@ const getExamples = (entry) => {
 
   if (data.hasOwnProperty('ExampleBlock')) {
     if (Array.isArray(data.ExampleBlock)) {
-      return data.ExampleBlock.map((example) => example.ExampleCtn[0].Example)
+      const examples = []
+
+      /**
+       * Get array of formatted example strings.
+       */
+      data.ExampleBlock.forEach((exampleData) => {
+        exampleData.ExampleCtn.forEach(example => {
+          examples.push(formatExample(example.Example[0]))
+        })
+      })
+
+      return examples
     }
   }
 
   return null
+}
+
+/**
+ * Examples come in many xml pieces.
+ * Combine them to reasonable string.
+ */
+const formatExample = (example) => {
+  let exampleString = ''
+
+  for (const [key, value] of Object.entries(example)) {
+    exampleString = exampleString + ' ' + value
+  }
+
+  return exampleString
 }
 
 module.exports = {
