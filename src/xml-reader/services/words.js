@@ -89,6 +89,11 @@ const getMeaning = (entry) => {
     if (typeof data.Definition === 'object') {
       if (data.Definition[0].hasOwnProperty('_')) {
         return data.Definition[0]._
+      } if (data.Definition[0].hasOwnProperty('SeeAlso')) {
+        const type = data.Definition[0].SeeAlso[0].$.style
+        const ref = data.Definition[0].SeeAlso[0].Ptr[0]._
+
+        return `${type} ${ref}`
       }
 
       // return data.Definition[0]
@@ -162,7 +167,7 @@ const getExamples = (entry) => {
        * Get array of formatted example strings.
        */
       data.ExampleBlock.forEach((exampleData) => {
-        exampleData.ExampleCtn.forEach(example => {
+        exampleData.ExampleCtn.forEach((example) => {
           examples.push(formatExample(example.Example[0]))
         })
       })
@@ -182,7 +187,7 @@ const formatExample = (example) => {
   let exampleString = ''
 
   for (const [key, value] of Object.entries(example)) {
-    exampleString = exampleString + ' ' + value
+    exampleString = `${exampleString} ${value}`
   }
 
   return exampleString
