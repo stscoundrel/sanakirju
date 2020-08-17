@@ -16,4 +16,7 @@ const fromXML = async () => {
   return result
 }
 
-fromXML()
+module.exports = {
+  scraper,
+  fromXML
+}
