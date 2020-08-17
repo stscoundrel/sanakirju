@@ -7,7 +7,7 @@ const { XML_FOLDERS } = require('../../constants/xml.js')
 const getAll = () => {
   let files = []
 
-  for (let i = 0; i < XML_FOLDERS.length; i++) {
+  for (let i = 0; i < XML_FOLDERS.length; i += 1) {
     files = files.concat(getFromFolder(XML_FOLDERS[i]))
   }
 

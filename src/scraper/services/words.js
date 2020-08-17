@@ -14,7 +14,7 @@ const getDefinitionsFromLinks = async (links, browser) => {
   // Get words from individual chunks.
   const definitions = []
 
-  for (let i = 0; i < wordLists.length; i++) {
+  for (let i = 0; i < wordLists.length; i += 1) {
     definitions.push(await getWordsInArray(wordLists[i], browser))
   }
 
@@ -31,7 +31,7 @@ const getDefinitionsFromLinks = async (links, browser) => {
  */
 const getWordsInArray = async (words, browser) => {
   const result = await Promise.all(
-    words.map(async (word) => await getDefinition(word, browser)),
+    words.map(async (word) => getDefinition(word, browser)),
   )
 
   return result
@@ -43,7 +43,7 @@ const getWordsInArray = async (words, browser) => {
  * --> Scrape data.
  */
 const getDefinition = async (wordUrl, browser) => {
-  const result = new Promise(async (resolve, reject) => {
+  const result = new Promise(async (resolve) => {
     const page = await browser.newPage()
 
     await page.goto(wordUrl)
