@@ -92,12 +92,20 @@ const getMeaning = (entry) => {
     if (typeof data.Definition === 'object') {
       if (data.Definition[0].hasOwnProperty('_')) {
         return data.Definition[0]._
-      } if (data.Definition[0].hasOwnProperty('SeeAlso')) {
+      }
+
+      if (data.Definition[0].hasOwnProperty('SeeAlso')) {
         const type = data.Definition[0].SeeAlso[0].$.style
         const ref = data.Definition[0].SeeAlso[0].Ptr[0]._
 
         return `${type} ${ref}`
       }
+
+      /**
+       * Definition is split to ridiculous pieces.
+       * Combine like examples.
+       */
+      return formatExample(data.Definition[0])
 
       // return data.Definition[0]
     }
