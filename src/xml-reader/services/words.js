@@ -190,7 +190,11 @@ const formatExample = (example) => {
   let exampleString = ''
 
   for (const [key, value] of Object.entries(example)) {
-    exampleString = `${exampleString} ${value}`
+    if( key !== 'RangeOfApplication') {
+      if( typeof value !== 'string') {
+        exampleString = `${exampleString} ${value}`
+      }
+    }  
   }
 
   return exampleString
