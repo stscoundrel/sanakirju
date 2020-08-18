@@ -113,7 +113,7 @@ const getMeaning = (entry) => {
     return data.Definition
   }
 
-  return null
+  return []
 }
 
 /**
@@ -135,7 +135,7 @@ const getType = (entry) => {
     }
   }
 
-  return null
+  return []
 }
 
 /**
