@@ -88,29 +88,31 @@ const getMeaning = (entry) => {
     data = entry
   }
 
-  if (data.hasOwnProperty('Definition')) {
-    if (typeof data.Definition === 'object') {
-      if (data.Definition[0].hasOwnProperty('_')) {
-        return data.Definition[0]._
-      }
+  if (data.hasOwnProperty('Definition')) {    
 
-      if (data.Definition[0].hasOwnProperty('SeeAlso')) {
-        const type = data.Definition[0].SeeAlso[0].$.style
-        const ref = data.Definition[0].SeeAlso[0].Ptr[0]._
+    if (data.Definition[0].hasOwnProperty('_')) {
+      
+      return data.Definition[0]._
+    }
 
-        return `${type} ${ref}`
-      }
+    if (data.Definition[0].hasOwnProperty('SeeAlso')) {
+      const type = data.Definition[0].SeeAlso[0].$.style
+      const ref = data.Definition[0].SeeAlso[0].Ptr[0]._
 
+      return `${type} ${ref}`
+    }
+
+   if( typeof data.Definition[0] !== 'string') {
       /**
        * Definition is split to ridiculous pieces.
        * Combine like examples.
        */
       return formatExample(data.Definition[0])
-
-      // return data.Definition[0]
     }
+    
+    //console.log(data.Definition[0])
 
-    return data.Definition
+    return data.Definition[0]
   }
 
   return []
@@ -196,9 +198,11 @@ const getExamples = (entry) => {
  */
 const formatExample = (example) => {
   let exampleString = ''
+  const exampleArray = Object.entries(example)
 
-  for (const [key, value] of Object.entries(example)) {
-    if( key !== 'RangeOfApplication') {
+  for (const [key, value] of exampleArray) {
+
+    if( key !== 'RangeOfApplication' ) {
       if( typeof value !== 'string') {
         exampleString = `${exampleString} ${value}`
       }

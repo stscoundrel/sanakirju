@@ -1,6 +1,6 @@
 {
   "name": "sanakirju",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Karelian - Finnish dictionary. Scraped from hard-to-use data to easy-to-use data.",
   "main": "sanakirju.js",
   "repository": "https://github.com/stscoundrel/sanakirju.git",
