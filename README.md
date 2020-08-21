@@ -4,6 +4,11 @@ Karelian - Finnish dictionary with over 90 000 words. Transforms hard-to-use dat
 
 Sanakirju is a starting point that offers you the complete dataset as JSON. Use it as you like, perhaps as a website, app, twitter bot or however other way you see fit.
 
+#### Examples:
+
+- [Sanakirju Objection.js](https://github.com/stscoundrel/sanakirju-objectionjs) - SQL with Objection.js.
+- [Sanakirju Mongoose](https://github.com/stscoundrel/sanakirju-mongoose) - MongoDB with Mongoose.
+
 
 ### Install
 
