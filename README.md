@@ -6,6 +6,7 @@ Sanakirju is a starting point that offers you the complete dataset as JSON. Use 
 
 #### Examples:
 
+- [Sanakirju Knex.js](https://github.com/stscoundrel/sanakirju-knex) - SQL with Knex.js
 - [Sanakirju Objection.js](https://github.com/stscoundrel/sanakirju-objectionjs) - SQL with Objection.js.
 - [Sanakirju Mongoose](https://github.com/stscoundrel/sanakirju-mongoose) - MongoDB with Mongoose.
 
