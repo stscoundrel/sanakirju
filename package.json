@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "puppeteer": "^5.2.1",
+    "spyrjari": "^1.0.1",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {

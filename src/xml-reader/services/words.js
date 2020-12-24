@@ -1,79 +1,33 @@
-/**
- * Format dictionary entries.
- */
-const formatEntries = (data) => {
-  const words = data.map((entry) => formatEntry(entry))
-
-  return words
-}
+const { hasProperty } = require('spyrjari')
 
 /**
- * Format individual entry.
+ * Examples come in many xml pieces.
+ * Combine them to reasonable string.
  */
-const formatEntry = (entry) => {
-  const word = {
-    word: getWord(entry),
-    definitions: getDefinitions(entry),
-  }
+const formatExample = (example) => {
+  let exampleString = ''
+  const exampleArray = Object.entries(example)
 
-  // return entry
-  return word
-}
-
-/**
- * Get definitions for word.
- * May have more than one, stored differently.
- */
-const getDefinitions = (entry) => {
-  const definitions = []
-
-  if (hasMultipleMeanings(entry)) {
-    /**
-     * Group may or may not have definition.
-     * Some are just usage examples.
-     * Only return ones that have.
-     */
-    entry.SenseGrp.forEach((subEntry) => {
-      if (subEntry.hasOwnProperty('Definition')) {
-        definitions.push(getDefinition(subEntry))
+  for (const [key, value] of exampleArray) {
+    if (key !== 'RangeOfApplication') {
+      if (typeof value !== 'string') {
+        exampleString = `${exampleString} ${value}`
       }
-    })
-  } else {
-    definitions.push(getDefinition(entry))
+    }
   }
-  return definitions
-}
 
-/**
- * Get definitions for single word.
- */
-const getDefinition = (entry) => ({
-  definition: getMeaning(entry),
-  type: getType(entry),
-  grammaticalNote: getGrammaticalNote(entry),
-  examples: getExamples(entry),
-})
+  return exampleString
+}
 
 /**
  * Check if entry has multiple definitions.
  */
 const hasMultipleMeanings = (entry) => {
-  if (entry.hasOwnProperty('SenseGrp')) {
+  if (hasProperty(entry, 'SenseGrp')) {
     return true
   }
 
   return false
-}
-
-/**
- * Get main word from entry.
- */
-const getWord = (entry) => {
-  if (typeof entry.HeadwordCtn[0].Headword[0] === 'object') {
-    return entry.HeadwordCtn[0].Headword[0]._
-  }
-
-  return entry.HeadwordCtn[0].Headword[0]
 }
 
 /**
@@ -82,35 +36,33 @@ const getWord = (entry) => {
 const getMeaning = (entry) => {
   let data
 
-  if (entry.hasOwnProperty('HeadwordCtn')) {
+  if (hasProperty(entry, 'HeadwordCtn')) {
     data = entry.HeadwordCtn[0]
   } else {
     data = entry
   }
 
-  if (data.hasOwnProperty('Definition')) {    
-
-    if (data.Definition[0].hasOwnProperty('_')) {
-      
+  if (hasProperty(data, 'Definition')) {
+    if (hasProperty(data.Definition[0], '_')) {
       return data.Definition[0]._
     }
 
-    if (data.Definition[0].hasOwnProperty('SeeAlso')) {
+    if (hasProperty(data.Definition[0], 'SeeAlso')) {
       const type = data.Definition[0].SeeAlso[0].$.style
       const ref = data.Definition[0].SeeAlso[0].Ptr[0]._
 
       return `${type} ${ref}`
     }
 
-   if( typeof data.Definition[0] !== 'string') {
+    if (typeof data.Definition[0] !== 'string') {
       /**
        * Definition is split to ridiculous pieces.
        * Combine like examples.
        */
       return formatExample(data.Definition[0])
     }
-    
-    //console.log(data.Definition[0])
+
+    // console.log(data.Definition[0])
 
     return data.Definition[0]
   }
@@ -125,13 +77,13 @@ const getMeaning = (entry) => {
 const getType = (entry) => {
   let data
 
-  if (entry.hasOwnProperty('HeadwordCtn')) {
+  if (hasProperty(entry, 'HeadwordCtn')) {
     data = entry.HeadwordCtn[0]
   } else {
     data = entry
   }
 
-  if (data.hasOwnProperty('PartOfSpeechCtn')) {
+  if (hasProperty(data, 'PartOfSpeechCtn')) {
     if (Array.isArray(data.PartOfSpeechCtn)) {
       return data.PartOfSpeechCtn.map((type) => type.PartOfSpeech[0].$.value)
     }
@@ -147,13 +99,13 @@ const getType = (entry) => {
 const getGrammaticalNote = (entry) => {
   let data
 
-  if (entry.hasOwnProperty('HeadwordCtn')) {
+  if (hasProperty(entry, 'HeadwordCtn')) {
     data = entry.HeadwordCtn[0]
   } else {
     data = entry
   }
 
-  if (data.hasOwnProperty('GrammaticalNote')) {
+  if (hasProperty(data, 'GrammaticalNote')) {
     return data.GrammaticalNote[0]._
   }
 
@@ -166,13 +118,13 @@ const getGrammaticalNote = (entry) => {
 const getExamples = (entry) => {
   let data
 
-  if (entry.hasOwnProperty('HeadwordCtn')) {
+  if (hasProperty(entry, 'HeadwordCtn')) {
     data = entry.HeadwordCtn[0]
   } else {
     data = entry
   }
 
-  if (data.hasOwnProperty('ExampleBlock')) {
+  if (hasProperty(data, 'ExampleBlock')) {
     if (Array.isArray(data.ExampleBlock)) {
       const examples = []
 
@@ -193,23 +145,70 @@ const getExamples = (entry) => {
 }
 
 /**
- * Examples come in many xml pieces.
- * Combine them to reasonable string.
+ * Get definitions for single word.
  */
-const formatExample = (example) => {
-  let exampleString = ''
-  const exampleArray = Object.entries(example)
+const getDefinition = (entry) => ({
+  definition: getMeaning(entry),
+  type: getType(entry),
+  grammaticalNote: getGrammaticalNote(entry),
+  examples: getExamples(entry),
+})
 
-  for (const [key, value] of exampleArray) {
+/**
+ * Get definitions for word.
+ * May have more than one, stored differently.
+ */
+const getDefinitions = (entry) => {
+  const definitions = []
 
-    if( key !== 'RangeOfApplication' ) {
-      if( typeof value !== 'string') {
-        exampleString = `${exampleString} ${value}`
+  if (hasMultipleMeanings(entry)) {
+    /**
+     * Group may or may not have definition.
+     * Some are just usage examples.
+     * Only return ones that have.
+     */
+    entry.SenseGrp.forEach((subEntry) => {
+      if (hasProperty(subEntry, 'Definition')) {
+        definitions.push(getDefinition(subEntry))
       }
-    }  
+    })
+  } else {
+    definitions.push(getDefinition(entry))
+  }
+  return definitions
+}
+
+/**
+ * Get main word from entry.
+ */
+const getWord = (entry) => {
+  if (typeof entry.HeadwordCtn[0].Headword[0] === 'object') {
+    return entry.HeadwordCtn[0].Headword[0]._
   }
 
-  return exampleString
+  return entry.HeadwordCtn[0].Headword[0]
+}
+
+/**
+ * Format individual entry.
+ */
+const formatEntry = (entry) => {
+  const word = {
+    word: getWord(entry),
+    definitions: getDefinitions(entry),
+  }
+
+  // return entry
+  return word
+}
+
+/**
+ * Format dictionary entries.
+ */
+const formatEntries = (data) => {
+  const words = data.map((entry) => formatEntry(entry))
+
+  return words
 }
 
 module.exports = {
