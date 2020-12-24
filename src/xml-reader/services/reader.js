@@ -2,23 +2,6 @@ const xml2js = require('xml2js')
 const { readFileSync } = require('fs')
 const wordService = require('./words.js')
 
-
-/**
- * Get json from list of xml files
- */
-const readFiles = async (files) => {
-  let allWords = []
-
-  for (let i = 0; i < files.length; i++) {
-    const content = await getFileContent(`${__dirname}/../xml/kksxml/${files[i]}`)
-    const words = await getWords(content)
-
-    allWords = allWords.concat(words)
-  }
-
-  return allWords
-}
-
 /**
  * Read content of individual file.
  */
@@ -42,12 +25,19 @@ const getWords = async (content) => {
 }
 
 /**
- * Format dictionary entries.
+ * Get json from list of xml files
  */
-const formatEntries = (data) => {
-  const words = data.map((entry) => entry.HeadwordCtn[0])
+const readFiles = async (files) => {
+  let allWords = []
 
-  return words
+  for (let i = 0; i < files.length; i += 1) {
+    const content = await getFileContent(`${__dirname}/../xml/kksxml/${files[i]}`)
+    const words = await getWords(content)
+
+    allWords = allWords.concat(words)
+  }
+
+  return allWords
 }
 
 module.exports = {
