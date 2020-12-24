@@ -1,8 +1,8 @@
 {
   "name": "sanakirju",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Karelian - Finnish dictionary. Scraped from hard-to-use data to easy-to-use data.",
-  "main": "sanakirju.js",
+  "main": "index.js",
   "repository": "https://github.com/stscoundrel/sanakirju.git",
   "author": "stscoundrel <sampo@pixels.fi>",
   "license": "MIT",
@@ -23,6 +23,6 @@
   "scripts": {
     "start": "node sanakirju.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "fix": "eslint . --fix"
   }
 }
