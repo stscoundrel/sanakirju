@@ -1,11 +1,7 @@
 const xml2js = require('xml2js')
-const fs = require('fs')
-const util = require('util')
+const { readFileSync } = require('fs')
 const wordService = require('./words.js')
 
-// Promisify xml reader.
-const readFile = util.promisify(fs.readFile)
-xml2js.parseStringPromise = util.promisify(xml2js.parseString);
 
 /**
  * Get json from list of xml files
@@ -27,7 +23,7 @@ const readFiles = async (files) => {
  * Read content of individual file.
  */
 const getFileContent = async (filePath) => {
-  const content = await readFile(filePath)
+  const content = await readFileSync(filePath)
 
   return content
 }
