@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { XML_FOLDERS } = require('../../constants/xml.js')
+const { XML_FOLDERS } = require('../constants/xml.js')
 
 /**
  * Fetch list of xml files in folder.
@@ -7,7 +7,7 @@ const { XML_FOLDERS } = require('../../constants/xml.js')
 const getFromFolder = (folder) => {
   const files = []
 
-  fs.readdirSync(`${__dirname}/../xml/kksxml/${folder}/`).forEach((file) => {
+  fs.readdirSync(folder).forEach((file) => {
     files.push(`${folder}/${file}`)
   })
 

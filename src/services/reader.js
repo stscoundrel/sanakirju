@@ -31,7 +31,7 @@ const readFiles = async (files) => {
   let allWords = []
 
   for (let i = 0; i < files.length; i += 1) {
-    const content = await getFileContent(`${__dirname}/../xml/kksxml/${files[i]}`)
+    const content = await getFileContent(files[i])
     const words = await getWords(content)
 
     allWords = allWords.concat(words)

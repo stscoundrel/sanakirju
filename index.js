@@ -1,4 +1,4 @@
-const xmlReader = require('./src/xml-reader')
+const xmlReader = require('./src')
 
 const fromXML = async () => {
   const result = await xmlReader()
