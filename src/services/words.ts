@@ -157,8 +157,8 @@ const formatEntry = (entry: RawEntry): DictionaryEntry => {
 /**
  * Format dictionary entries.
  */
-const formatEntries = (data: Array<RawEntry>): Array<DictionaryEntry> => {
-  const words: Array<DictionaryEntry> = data.map((entry) => formatEntry(entry));
+const formatEntries = (data: RawEntry[]): DictionaryEntry[] => {
+  const words: DictionaryEntry[] = data.map((entry) => formatEntry(entry));
 
   return words;
 };
