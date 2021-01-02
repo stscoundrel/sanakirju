@@ -1,25 +1,7 @@
 import { hasProperty } from 'spyrjari';
-import { RawExampleBlock, RawExample, RawEntry } from '../interfaces/raw-entries';
+import { getExamples, formatExample } from './examples';
+import { RawEntry } from '../interfaces/raw-entries';
 import { Definition, DictionaryEntry } from '../interfaces/entries';
-
-/**
- * Examples come in many xml pieces.
- * Combine them to reasonable string.
- */
-const formatExample = (example: RawExample): string => {
-  let exampleString = '';
-  const exampleArray: [string, Record<string, unknown>][] = Object.entries(example);
-
-  for (const [key, value] of exampleArray) {
-    if (key !== 'RangeOfApplication') {
-      if (typeof value !== 'string') {
-        exampleString = `${exampleString} ${value}`;
-      }
-    }
-  }
-
-  return exampleString;
-};
 
 /**
  * Check if entry has multiple definitions.
@@ -112,38 +94,6 @@ const getGrammaticalNote = (entry: RawEntry): string | null => {
   }
 
   return null;
-};
-
-/**
- * Get examples from entry.
- */
-const getExamples = (entry: RawEntry): string[] => {
-  let data;
-
-  if (hasProperty(entry, 'HeadwordCtn')) {
-    data = entry.HeadwordCtn[0];
-  } else {
-    data = entry;
-  }
-
-  if (hasProperty(data, 'ExampleBlock')) {
-    if (Array.isArray(data.ExampleBlock)) {
-      const examples: string[] = [];
-
-      /**
-       * Get array of formatted example strings.
-       */
-      data.ExampleBlock.forEach((exampleData: RawExampleBlock) => {
-        exampleData.ExampleCtn.forEach((example) => {
-          examples.push(formatExample(example.Example[0]));
-        });
-      });
-
-      return examples;
-    }
-  }
-
-  return [];
 };
 
 /**
