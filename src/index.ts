@@ -1,4 +1,4 @@
-import filesService from './services/files';
+import filesService from './services/fileList';
 import readerService from './services/reader';
 import { DictionaryEntry } from './interfaces/entries';
 
