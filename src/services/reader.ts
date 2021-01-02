@@ -1,7 +1,6 @@
 import xml2js from 'xml2js';
 import { readFileSync } from 'fs';
-import { DictionaryEntry } from '../interfaces/entries';
-import wordService from './words.js';
+import { RawEntry } from '../interfaces/raw-entries';
 
 /**
  * Read content of individual file.
@@ -15,12 +14,12 @@ const getFileContent = async (filePath: string) => {
 /**
  * Get words from file content.
  */
-const getWords = async (content: Buffer) : Promise<DictionaryEntry[]> => {
+const getWords = async (content: Buffer) : Promise<RawEntry[]> => {
   const parser = new xml2js.Parser();
 
   const data = await parser.parseStringPromise(content);
 
-  const words: DictionaryEntry[] = wordService.formatEntries(data.Dictionary.DictionaryEntry);
+  const words: RawEntry[] = data.Dictionary.DictionaryEntry;
 
   return words;
 };
@@ -28,8 +27,8 @@ const getWords = async (content: Buffer) : Promise<DictionaryEntry[]> => {
 /**
  * Get json from list of xml files
  */
-const readFiles = async (filePaths: string[]): Promise<DictionaryEntry[]> => {
-  let allWords: DictionaryEntry[] = [];
+const readFiles = async (filePaths: string[]): Promise<RawEntry[]> => {
+  let allWords: RawEntry[] = [];
 
   for (let i = 0; i < filePaths.length; i += 1) {
     const content = await getFileContent(filePaths[i]);
