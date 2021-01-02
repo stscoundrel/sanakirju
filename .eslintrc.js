@@ -1,15 +1,22 @@
 module.exports = {
-  extends: 'airbnb-base',
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'airbnb-base',
+  ],
+  plugins: [
+    'jest',
+    '@typescript-eslint',
+  ],
   env: {
     node: true,
     es6: true,
+    'jest/globals': true,
   },
   globals: {
     document: true,
   },
   rules: {
-    semi: 0,
-    'no-console': 0,
-    'consistent-return': 0,
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
   },
-}
+};

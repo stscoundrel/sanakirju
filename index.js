@@ -1,10 +1,10 @@
-const xmlReader = require('./src')
+const xmlReader = require('./src');
 
 const fromXML = async () => {
-  const result = await xmlReader()
-  return result
-}
+  const result = await xmlReader();
+  return result;
+};
 
 module.exports = {
   fromXML,
-}
+};
