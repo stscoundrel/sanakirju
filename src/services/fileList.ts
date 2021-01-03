@@ -1,5 +1,4 @@
 import { readdirSync } from 'fs';
-import { XML_FOLDERS } from '../constants/xml';
 
 /**
  * Fetch list of xml files in folder.
@@ -15,13 +14,13 @@ const getFromFolder = (folder: string): string[] => {
 };
 
 /**
- * Get list of all files
+ * Get list of all files in folders.
  */
-const getAll = (): string[] => {
+const getAll = (folders: string[]): string[] => {
   let files: string[] = [];
 
-  for (let i = 0; i < XML_FOLDERS.length; i += 1) {
-    files = files.concat(getFromFolder(XML_FOLDERS[i]));
+  for (let i = 0; i < folders.length; i += 1) {
+    files = files.concat(getFromFolder(folders[i]));
   }
 
   return files;
