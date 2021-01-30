@@ -1,4 +1,4 @@
-import fileList from '../../src/services/filelist';
+import fileList from '../../src/services/fileList';
 
 describe('FileList service', () => {
   test('Lists files in given folder', () => {
