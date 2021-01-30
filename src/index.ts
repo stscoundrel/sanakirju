@@ -1,4 +1,4 @@
-import filesService from './services/filelist';
+import filesService from './services/fileList';
 import readerService from './services/reader';
 import wordService from './services/words';
 import { XML_FOLDERS } from './constants/xml';
