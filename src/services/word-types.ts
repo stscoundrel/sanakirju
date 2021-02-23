@@ -7,7 +7,7 @@ import { RawEntry } from '../interfaces/raw-entries';
  * Get word type from entry data.
  * May have multiple types, like 'noun' and 'adjective'
  */
-export const getType = (entry: RawEntry): string => {
+export const getType = (entry: RawEntry): string[] => {
   let data;
 
   if (hasProperty(entry, 'HeadwordCtn')) {
@@ -22,7 +22,7 @@ export const getType = (entry: RawEntry): string => {
     }
   }
 
-  return '';
+  return [];
 };
 
 export default {
