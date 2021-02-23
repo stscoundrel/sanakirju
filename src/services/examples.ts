@@ -17,7 +17,7 @@ export const formatExample = (example: RawExample): string => {
     }
   }
 
-  return exampleString;
+  return exampleString.trim();
 };
 
 /**
