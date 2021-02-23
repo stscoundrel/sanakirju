@@ -1,5 +1,5 @@
 import exampleService from '../../src/services/examples';
-import { entryFixture } from './fixtures/entry-fixture.js';
+import { entryFixture } from './fixtures/entry-fixtures.js';
 import { simpleExampleFixture, complexExampleFixture } from './fixtures/example-fixture.js';
 
 describe('Examples service', () => {
