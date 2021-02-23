@@ -1,6 +1,6 @@
 export interface Definition {
   definition: string;
-  type: string;
+  type: string[];
   grammaticalNote: string | null;
   examples: string[];
 }
