@@ -9,14 +9,16 @@ export const formatExample = (example: RawExample): string => {
   let exampleString = '';
   const exampleArray: [string, Record<string, unknown>][] = Object.entries(example);
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const [key, value] of exampleArray) {
-    if (key !== 'RangeOfApplication') {
+    if (key !== 'RangeOfApplication' && key !== 'GeographicalUsage') {
       if (typeof value !== 'string') {
         exampleString = `${exampleString} ${value}`;
       }
     }
   }
 
+  // console.log(exampleString.trim())
   return exampleString.trim();
 };
 
