@@ -1,6 +1,6 @@
 import exampleService from '../../src/services/examples';
-import { entryFixture } from './fixtures/entry-fixtures.js';
-import { simpleExampleFixture, complexExampleFixture } from './fixtures/example-fixture.js';
+import { entryFixture } from './fixtures/entry-fixtures.ts';
+import { simpleExampleFixture, complexExampleFixture } from './fixtures/example-fixture.ts';
 
 describe('Examples service', () => {
   test('Returns empty array if no examples in entry', async () => {

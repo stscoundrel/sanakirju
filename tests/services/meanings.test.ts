@@ -1,5 +1,5 @@
 import meaningService from '../../src/services/meanings';
-import { entryFixture, entryFixtureMultipleMeanings } from './fixtures/entry-fixtures.js';
+import { entryFixture, entryFixtureMultipleMeanings } from './fixtures/entry-fixtures.ts';
 
 describe('Meanings service', () => {
   test('Detects if entry has multiple meanings', async () => {
