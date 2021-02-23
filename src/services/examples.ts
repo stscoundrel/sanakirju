@@ -18,7 +18,6 @@ export const formatExample = (example: RawExample): string => {
     }
   }
 
-  // console.log(exampleString.trim())
   return exampleString.trim();
 };
 

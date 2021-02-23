@@ -3,6 +3,14 @@ import { entryFixture } from './examples/entry-fixture.js';
 import { simpleExampleFixture, complexExampleFixture } from './examples/example-fixture.js';
 
 describe('Examples service', () => {
+  test('Returns empty array if no examples in entry', async () => {
+    const entry = { ...entryFixture, ExampleBlock: [] };
+
+    const result = await exampleService.getExamples(entry);
+
+    expect(result).toEqual([]);
+  });
+
   test('Gets examples from entry', async () => {
     const entry = entryFixture;
     const expected = [
@@ -24,7 +32,7 @@ describe('Examples service', () => {
     expect(result).toEqual(expected);
   });
 
-  test('Formats comples example', async () => {
+  test('Formats complex example', async () => {
     const example = complexExampleFixture;
     const expected = "jo heän onkija typyttelöyve nenäšš‿on utusen ńiemen, peäššäkö šoaren terhellisen,Lämmitä kyly utuni, Pian pirtti riuottele,Kussakk' on utuni vyöllä Kesä uuhen uujuloista";
 
