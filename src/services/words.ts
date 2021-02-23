@@ -1,32 +1,11 @@
 import { hasProperty } from 'spyrjari';
 import { getExamples } from './examples';
 import { hasMultipleMeanings, getMeaning } from './meanings';
+import { getType } from './word-types';
 
 // Type defs.
 import { RawEntry } from '../interfaces/raw-entries';
 import { Definition, DictionaryEntry } from '../interfaces/entries';
-
-/**
- * Get word type from entry data.
- * May have multiple types, like 'noun' and 'adjective'
- */
-const getType = (entry: RawEntry): string => {
-  let data;
-
-  if (hasProperty(entry, 'HeadwordCtn')) {
-    data = entry.HeadwordCtn[0];
-  } else {
-    data = entry;
-  }
-
-  if (hasProperty(data, 'PartOfSpeechCtn')) {
-    if (Array.isArray(data.PartOfSpeechCtn)) {
-      return data.PartOfSpeechCtn.map((type) => type.PartOfSpeech[0].$.value);
-    }
-  }
-
-  return '';
-};
 
 /**
  * Get grammatical note from entry.
