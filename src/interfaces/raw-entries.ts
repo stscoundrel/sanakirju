@@ -10,13 +10,18 @@ export interface RawExampleBlock {
     ExampleCtn: RawExampleCtn[];
 }
 
+export interface RawDataSet {
+  _ : string,
+  $ : string,
+}
+
 export interface RawEntry {
   HeadwordCtn: RawEntry;
   SenseGrp: RawEntry[];
   Headword: string;
-  Definition: string[];
+  Definition: RawDataSet;
   SeeAlso: string[];
-  GrammaticalNote: string;
-  PartOfSpeechCtn: string[];
+  GrammaticalNote: RawDataSet;
+  PartOfSpeechCtn: RawDataSet;
   ExampleBlock: RawExampleBlock
 }
