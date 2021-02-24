@@ -7,7 +7,7 @@ describe('Word types service', () => {
     const result2 = getType(entryFixtureMultipleMeanings);
     const result3 = getType(thirdEntry);
 
-    expect(result1).toEqual([]); // This fixture has no defined type.
+    expect(result1).toEqual(['adjective']);
     expect(result2).toEqual(['verb']);
     expect(result3).toEqual(['verb']);
   });
