@@ -43,6 +43,6 @@
     "test:unit": "jest tests/unit --verbose --passWithNoTests",
     "test:integration": "jest tests/integration --verbose --passWithNoTests",
     "build": "tsc",
-    "prepublishOnly": "yarn build && yarn lint && yarn test"
+    "prepublishOnly": "yarn build && yarn lint && yarn test:unit && yarn test:integration"
   }
 }
