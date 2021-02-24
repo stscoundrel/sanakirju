@@ -15,7 +15,6 @@
     "node": ">=12.0.0"
   },
   "dependencies": {
-    "puppeteer": "^5.2.1",
     "spyrjari": "^1.0.1",
     "xml2js": "^0.4.23"
   },
@@ -41,7 +40,7 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "jest --verbose --runInBand --passWithNoTests",
+    "test": "jest --verbose --passWithNoTests",
     "build": "tsc",
     "prepublishOnly": "yarn build && yarn lint && yarn test"
   }
