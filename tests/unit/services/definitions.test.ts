@@ -1,4 +1,4 @@
-import { getDefinitions, getDefinition } from '../../src/services/definitions';
+import { getDefinitions, getDefinition } from '../../../src/services/definitions';
 import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Definition service', () => {

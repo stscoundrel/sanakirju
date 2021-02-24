@@ -13,4 +13,6 @@ export const fromXML = async () : Promise<DictionaryEntry[]> => {
   return entries;
 };
 
-export default fromXML;
+export default {
+  fromXML,
+};

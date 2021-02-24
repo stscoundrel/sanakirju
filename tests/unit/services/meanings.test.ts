@@ -1,4 +1,4 @@
-import meaningService from '../../src/services/meanings';
+import meaningService from '../../../src/services/meanings';
 import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Meanings service', () => {

@@ -1,4 +1,4 @@
-import { getType } from '../../src/services/word-types';
+import { getType } from '../../../src/services/word-types';
 import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Word types service', () => {
