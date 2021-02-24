@@ -185,6 +185,102 @@ export const entryFixtureMultipleMeanings = {
   ],
 };
 
+export const thirdEntry = {
+  $: {
+    sortKey: '88327',
+    identifier: 'önkähytteä',
+  },
+  HeadwordCtn: [
+    {
+      Headword: [
+        'önkähytteä',
+      ],
+      SearchForm: [
+        'önkähytteä',
+      ],
+      PartOfSpeechCtn: [
+        {
+          PartOfSpeech: [
+            {
+              $: {
+                display: 'no',
+                freeValue: 'kaus.v.',
+                value: 'verb',
+              },
+            },
+          ],
+          Subcategorisation: [
+            {
+              _: 'kaus.',
+              $: {
+                display: 'no',
+              },
+            },
+          ],
+        },
+      ],
+      GrammaticalNote: [
+        {
+          _: 'kaus.v.',
+          $: {
+            display: 'yes',
+          },
+        },
+      ],
+      Definition: [
+        {
+          SeeAlso: [
+            {
+              $: {
+                style: 'kanta',
+              },
+              Ptr: [
+                {
+                  _: '→ önkähteäkseh.',
+                  $: {
+                    'xlink:href': 'önkähteäkseh',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      ExampleBlock: [
+        {
+          ExampleCtn: [
+            {
+              Example: [
+                {
+                  Fragment: [
+                    'kirgai öngähytti.',
+                  ],
+                },
+              ],
+              FreeTopic: [
+                {
+                  $: {
+                    type: 'levikki',
+                  },
+                  GeographicalUsage: [
+                    {
+                      _: 'Suoj',
+                      $: {
+                        freeType: 'pitäjä',
+                        class: 'pitäjä',
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   entryFixture,
 };

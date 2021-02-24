@@ -2,30 +2,11 @@ import { hasProperty } from 'spyrjari';
 import { getExamples } from './examples';
 import { hasMultipleMeanings, getMeaning } from './meanings';
 import { getType } from './word-types';
+import { getGrammaticalNote } from './grammatical-note';
 
 // Type defs.
 import { RawEntry } from '../interfaces/raw-entries';
 import { Definition, DictionaryEntry } from '../interfaces/entries';
-
-/**
- * Get grammatical note from entry.
- * Apparently extra info on type.
- */
-const getGrammaticalNote = (entry: RawEntry): string | null => {
-  let data;
-
-  if (hasProperty(entry, 'HeadwordCtn')) {
-    data = entry.HeadwordCtn[0];
-  } else {
-    data = entry;
-  }
-
-  if (hasProperty(data, 'GrammaticalNote')) {
-    return data.GrammaticalNote[0]._;
-  }
-
-  return null;
-};
 
 /**
  * Get definitions for single word.
