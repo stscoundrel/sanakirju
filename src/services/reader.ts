@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 import xml2js from 'xml2js';
 import { readFileSync } from 'fs';
 import { RawEntry } from '../interfaces/raw-entries';
