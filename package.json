@@ -1,6 +1,6 @@
 {
   "name": "sanakirju",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Karelian - Finnish dictionary. Scraped from hard-to-use data to easy-to-use data.",
   "repository": "https://github.com/stscoundrel/sanakirju.git",
   "author": "stscoundrel <sampo@pixels.fi>",
@@ -43,6 +43,6 @@
     "test:unit": "jest tests/unit --verbose --passWithNoTests",
     "test:integration": "jest tests/integration --verbose --passWithNoTests",
     "build": "tsc",
-    "prepublishOnly": "yarn build && yarn lint && yarn test"
+    "prepublishOnly": "yarn build && yarn lint && yarn test:unit && yarn test:integration"
   }
 }
