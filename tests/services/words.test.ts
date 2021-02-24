@@ -1,5 +1,5 @@
 import { formatEntry, formatEntries } from '../../src/services/words';
-import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from './fixtures/entry-fixtures.ts';
+import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Word service', () => {
   test('Formats individual entries', async () => {

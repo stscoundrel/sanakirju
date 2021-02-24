@@ -1,4 +1,5 @@
 import { hasProperty } from 'spyrjari';
+import { getEntryDataSource } from '../utils/entry-data-source';
 import { RawExampleBlock, RawExample, RawEntry } from '../interfaces/raw-entries';
 
 /**
@@ -25,13 +26,7 @@ export const formatExample = (example: RawExample): string => {
  * Get examples from entry.
  */
 export const getExamples = (entry: RawEntry): string[] => {
-  let data;
-
-  if (hasProperty(entry, 'HeadwordCtn')) {
-    data = entry.HeadwordCtn[0];
-  } else {
-    data = entry;
-  }
+  const data = getEntryDataSource(entry);
 
   if (hasProperty(data, 'ExampleBlock')) {
     if (Array.isArray(data.ExampleBlock)) {

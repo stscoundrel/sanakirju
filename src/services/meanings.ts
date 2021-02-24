@@ -1,6 +1,9 @@
 import { hasProperty } from 'spyrjari';
-import { RawEntry } from '../interfaces/raw-entries';
+import { getEntryDataSource } from '../utils/entry-data-source';
 import { formatExample } from './examples';
+
+// Type definitions.
+import { RawEntry } from '../interfaces/raw-entries';
 
 /**
  * Check if entry has multiple definitions.
@@ -17,13 +20,7 @@ export const hasMultipleMeanings = (entry: RawEntry): boolean => {
  * Get meaning of word.
  */
 export const getMeaning = (entry: RawEntry) : string => {
-  let data;
-
-  if (hasProperty(entry, 'HeadwordCtn')) {
-    data = entry.HeadwordCtn[0];
-  } else {
-    data = entry;
-  }
+  const data = getEntryDataSource(entry);
 
   if (hasProperty(data, 'Definition')) {
     if (hasProperty(data.Definition[0], '_')) {

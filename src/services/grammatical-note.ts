@@ -1,4 +1,5 @@
 import { hasProperty } from 'spyrjari';
+import { getEntryDataSource } from '../utils/entry-data-source';
 
 // Type definitions.
 import { RawEntry } from '../interfaces/raw-entries';
@@ -8,13 +9,7 @@ import { RawEntry } from '../interfaces/raw-entries';
  * Apparently extra info on type.
  */
 export const getGrammaticalNote = (entry: RawEntry): string | null => {
-  let data;
-
-  if (hasProperty(entry, 'HeadwordCtn')) {
-    data = entry.HeadwordCtn[0];
-  } else {
-    data = entry;
-  }
+  const data = getEntryDataSource(entry);
 
   if (hasProperty(data, 'GrammaticalNote')) {
     return data.GrammaticalNote[0]._;
