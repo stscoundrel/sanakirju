@@ -1,6 +1,6 @@
 import exampleService from '../../src/services/examples';
-import { entryFixture } from './fixtures/entry-fixtures.ts';
-import { simpleExampleFixture, complexExampleFixture } from './fixtures/example-fixture.ts';
+import { entryFixture } from '../fixtures/entry-fixtures.ts';
+import { simpleExampleFixture, complexExampleFixture } from '../fixtures/example-fixture.ts';
 
 describe('Examples service', () => {
   test('Gets examples from entry', async () => {

@@ -1,5 +1,5 @@
 import { getDefinitions, getDefinition } from '../../src/services/definitions';
-import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from './fixtures/entry-fixtures.ts';
+import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Definition service', () => {
   test('Gets definitions from an entry', async () => {
