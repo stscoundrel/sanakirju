@@ -1,60 +1,75 @@
 export const entryFixture = {
   $: {
-    senseNumber: '2.',
+    sortKey: '17473',
+    identifier: 'keilakko',
   },
-  Definition: [
-    'pelätä.',
-  ],
-  ExampleBlock: [
+  HeadwordCtn: [
     {
-      ExampleCtn: [
+      Headword: [
+        'keilakko',
+      ],
+      SearchForm: [
+        'keilakko',
+      ],
+      PartOfSpeechCtn: [
         {
-          Example: [
-            {
-              _: '  pelkää. ',
-              Fragment: [
-                'em minä händy hykä ylen äjjäl, engo händy varoa',
-              ],
-            },
-          ],
-          FreeTopic: [
+          PartOfSpeech: [
             {
               $: {
-                type: 'levikki',
+                display: 'no',
+                freeValue: 'a.',
+                value: 'adjective',
               },
-              GeographicalUsage: [
-                {
-                  _: 'Säämäj',
-                  $: {
-                    freeType: 'pitäjä',
-                    class: 'pitäjä',
-                  },
-                },
-              ],
             },
           ],
         },
+      ],
+      GrammaticalNote: [
         {
-          Example: [
+          _: 'a.',
+          $: {
+            display: 'yes',
+          },
+        },
+      ],
+      Definition: [
+        'kiikkerä.',
+      ],
+      ExampleBlock: [
+        {
+          ExampleCtn: [
             {
-              _: ' . ',
-              Fragment: [
-                'en hykä nennii miehii, tulgah hod́ viiži',
-              ],
-            },
-          ],
-          FreeTopic: [
-            {
-              $: {
-                type: 'levikki',
-              },
-              GeographicalUsage: [
+              Example: [
                 {
-                  _: 'Nek-Riip',
+                  _: '  (). ',
+                  Fragment: [
+                    'keilak|ko, -an ~ -on. keilakko veneh',
+                  ],
+                  RangeOfApplication: [
+                    {
+                      _: 'harv.',
+                      $: {
+                        freeType: 'käyttöala',
+                        'kotus:grouping': '8',
+                      },
+                    },
+                  ],
+                },
+              ],
+              FreeTopic: [
+                {
                   $: {
-                    freeType: 'pitäjä',
-                    class: 'pitäjä',
+                    type: 'levikki',
                   },
+                  GeographicalUsage: [
+                    {
+                      _: 'Säämäj',
+                      $: {
+                        freeType: 'pitäjä',
+                        class: 'pitäjä',
+                      },
+                    },
+                  ],
                 },
               ],
             },

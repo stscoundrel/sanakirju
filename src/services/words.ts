@@ -3,6 +3,7 @@ import { getExamples } from './examples';
 import { hasMultipleMeanings, getMeaning } from './meanings';
 import { getType } from './word-types';
 import { getGrammaticalNote } from './grammatical-note';
+import { getHeadWord } from './headwords';
 
 // Type defs.
 import { RawEntry } from '../interfaces/raw-entries';
@@ -43,26 +44,14 @@ const getDefinitions = (entry: RawEntry): Definition[] => {
 };
 
 /**
- * Get main word from entry.
- */
-const getWord = (entry: RawEntry): string => {
-  if (typeof entry.HeadwordCtn[0].Headword[0] === 'object') {
-    return entry.HeadwordCtn[0].Headword[0]._;
-  }
-
-  return entry.HeadwordCtn[0].Headword[0];
-};
-
-/**
  * Format individual entry.
  */
 const formatEntry = (entry: RawEntry): DictionaryEntry => {
   const word: DictionaryEntry = {
-    word: getWord(entry),
+    word: getHeadWord(entry),
     definitions: getDefinitions(entry),
   };
 
-  // return entry
   return word;
 };
 

@@ -22,7 +22,7 @@ describe('Meanings service', () => {
     const result2 = meaningService.getMeaning(entryFixtureMultipleMeanings.SenseGrp[0]);
     const result3 = meaningService.getMeaning(thirdEntry);
 
-    expect(result1).toBe('pelätä.');
+    expect(result1).toBe('kiikkerä.');
     expect(result2).toBe('kikattaa.');
     expect(result3).toBe('kanta → önkähteäkseh.');
   });

@@ -3,24 +3,23 @@ import { entryFixture } from './fixtures/entry-fixtures.ts';
 import { simpleExampleFixture, complexExampleFixture } from './fixtures/example-fixture.ts';
 
 describe('Examples service', () => {
+  test('Gets examples from entry', async () => {
+    const expected = [
+      'keilak|ko, -an ~ -on. keilakko veneh',
+    ];
+
+    const result = await exampleService.getExamples(entryFixture);
+
+    expect(result).toEqual(expected);
+  });
+
   test('Returns empty array if no examples in entry', async () => {
-    const entry = { ...entryFixture, ExampleBlock: [] };
+    const entry = { ...entryFixture };
+    entry.HeadwordCtn[0].ExampleBlock = [];
 
     const result = await exampleService.getExamples(entry);
 
     expect(result).toEqual([]);
-  });
-
-  test('Gets examples from entry', async () => {
-    const entry = entryFixture;
-    const expected = [
-      'em minä händy hykä ylen äjjäl, engo händy varoa',
-      'en hykä nennii miehii, tulgah hod́ viiži',
-    ];
-
-    const result = await exampleService.getExamples(entry);
-
-    expect(result).toEqual(expected);
   });
 
   test('Formats simple example', async () => {

@@ -7,7 +7,7 @@ describe('Grammatical note service', () => {
     const result2 = getGrammaticalNote(entryFixtureMultipleMeanings);
     const result3 = getGrammaticalNote(thirdEntry);
 
-    expect(result1).toBeNull(); // This fixture has no grammar note.
+    expect(result1).toEqual('a.');
     expect(result2).toEqual('v.');
     expect(result3).toEqual('kaus.v.');
   });
