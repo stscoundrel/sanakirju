@@ -8,7 +8,7 @@ import { DictionaryEntry } from '../interfaces/entries';
 /**
  * Format individual entry.
  */
-const formatEntry = (entry: RawEntry): DictionaryEntry => {
+export const formatEntry = (entry: RawEntry): DictionaryEntry => {
   const word: DictionaryEntry = {
     word: getHeadWord(entry),
     definitions: getDefinitions(entry),
@@ -20,12 +20,13 @@ const formatEntry = (entry: RawEntry): DictionaryEntry => {
 /**
  * Format dictionary entries.
  */
-const formatEntries = (data: RawEntry[]): DictionaryEntry[] => {
+export const formatEntries = (data: RawEntry[]): DictionaryEntry[] => {
   const words: DictionaryEntry[] = data.map((entry) => formatEntry(entry));
 
   return words;
 };
 
 export default {
+  formatEntry,
   formatEntries,
 };
