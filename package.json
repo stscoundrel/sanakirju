@@ -40,7 +40,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "jest --verbose --passWithNoTests",
+    "test:unit": "jest tests/unit --verbose --passWithNoTests",
+    "test:integration": "jest tests/integration --verbose --passWithNoTests",
     "build": "tsc",
     "prepublishOnly": "yarn build && yarn lint && yarn test"
   }

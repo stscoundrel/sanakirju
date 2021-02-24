@@ -1,4 +1,4 @@
-name: TypeScript - Test
+name: TypeScript - Unit Tests
 
 on: [pull_request]
 
@@ -13,11 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Test with Node.js ${{ matrix.node-version }}
+    - name: Unit Tests with Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --production=false
-    - run: yarn test
+    - run: yarn test:unit
       env:
         CI: true

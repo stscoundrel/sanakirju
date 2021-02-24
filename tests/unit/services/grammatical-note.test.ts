@@ -1,4 +1,4 @@
-import { getGrammaticalNote } from '../../src/services/grammatical-note';
+import { getGrammaticalNote } from '../../../src/services/grammatical-note';
 import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Grammatical note service', () => {

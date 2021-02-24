@@ -1,4 +1,4 @@
-import { getEntryDataSource } from '../../src/utils/entry-data-source';
+import { getEntryDataSource } from '../../../src/utils/entry-data-source';
 import { entryFixture, entryFixtureMultipleMeanings } from '../fixtures/entry-fixtures.ts';
 
 describe('Utils: entry data soruce', () => {

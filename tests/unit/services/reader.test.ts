@@ -1,9 +1,9 @@
-import readerService from '../../src/services/reader';
+import readerService from '../../../src/services/reader';
 
 describe('Reader service', () => {
   test('Reads xml to json', async () => {
     const files = [
-      `${__dirname}/../../resources/xml/kksxml/kks1/01_a.xml`,
+      `${__dirname}/../../../resources/xml/kksxml/kks1/01_a.xml`,
     ];
 
     const result = await readerService.readFiles(files);

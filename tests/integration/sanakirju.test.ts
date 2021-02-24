@@ -1,4 +1,4 @@
-import sanakirju from '../src';
+import sanakirju from '../../src';
 
 describe('Dictionary tests', () => {
   test('Reads correct amount of dictionary entries.', async () => {
