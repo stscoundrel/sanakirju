@@ -13,7 +13,8 @@ export const getType = (entry: RawEntry): string[] => {
 
   if (hasProperty(data, 'PartOfSpeechCtn')) {
     if (Array.isArray(data.PartOfSpeechCtn)) {
-      return data.PartOfSpeechCtn.map((type) => type.PartOfSpeech[0].$.value);
+      const types = data.PartOfSpeechCtn.map((type) => type.PartOfSpeech[0].value);
+      return types.flat();
     }
   }
 

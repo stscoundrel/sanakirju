@@ -15,11 +15,11 @@ export const entryFixture = {
         {
           PartOfSpeech: [
             {
-              $: {
-                display: 'no',
-                freeValue: 'a.',
-                value: 'adjective',
-              },
+
+              display: ['no'],
+              freeValue: ['a.'],
+              value: ['adjective'],
+
             },
           ],
         },
@@ -27,9 +27,8 @@ export const entryFixture = {
       GrammaticalNote: [
         {
           _: 'a.',
-          $: {
-            display: 'yes',
-          },
+          display: ['yes'],
+
         },
       ],
       Definition: [
@@ -97,11 +96,11 @@ export const entryFixtureMultipleMeanings = {
         {
           PartOfSpeech: [
             {
-              $: {
-                display: 'no',
-                freeValue: 'v.',
-                value: 'verb',
-              },
+
+              display: ['no'],
+              freeValue: ['v.'],
+              value: ['verb'],
+
             },
           ],
         },
@@ -109,9 +108,8 @@ export const entryFixtureMultipleMeanings = {
       GrammaticalNote: [
         {
           _: 'v.',
-          $: {
-            display: 'yes',
-          },
+          display: ['yes'],
+
         },
       ],
     },
@@ -217,19 +215,19 @@ export const thirdEntry = {
         {
           PartOfSpeech: [
             {
-              $: {
-                display: 'no',
-                freeValue: 'kaus.v.',
-                value: 'verb',
-              },
+
+              display: ['no'],
+              freeValue: ['kaus.v.'],
+              value: ['verb'],
+
             },
           ],
           Subcategorisation: [
             {
               _: 'kaus.',
-              $: {
-                display: 'no',
-              },
+
+              display: ['no'],
+
             },
           ],
         },
@@ -237,18 +235,18 @@ export const thirdEntry = {
       GrammaticalNote: [
         {
           _: 'kaus.v.',
-          $: {
-            display: 'yes',
-          },
+
+          display: ['yes'],
+
         },
       ],
       Definition: [
         {
           SeeAlso: [
             {
-              $: {
-                style: 'kanta',
-              },
+
+              style: 'kanta',
+
               Ptr: [
                 {
                   _: '→ önkähteäkseh.',
@@ -274,16 +272,16 @@ export const thirdEntry = {
               ],
               FreeTopic: [
                 {
-                  $: {
-                    type: 'levikki',
-                  },
+
+                  type: 'levikki',
+
                   GeographicalUsage: [
                     {
                       _: 'Suoj',
-                      $: {
-                        freeType: 'pitäjä',
-                        class: 'pitäjä',
-                      },
+
+                      freeType: 'pitäjä',
+                      class: 'pitäjä',
+
                     },
                   ],
                 },
