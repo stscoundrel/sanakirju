@@ -28,7 +28,7 @@ export const getMeaning = (entry: RawEntry) : string => {
     }
 
     if (hasProperty(data.Definition[0], 'SeeAlso')) {
-      const type = data.Definition[0].SeeAlso[0].$.style;
+      const type = data.Definition[0].SeeAlso[0].style;
       const ref = data.Definition[0].SeeAlso[0].Ptr[0]._;
 
       return `${type} ${ref}`;

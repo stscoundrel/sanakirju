@@ -6,7 +6,81 @@ describe('Utils: entry data soruce', () => {
     const result = getEntryDataSource(entryFixture);
 
     const expected = {
-      Definition: ['kiikkerä.'], ExampleBlock: [{ ExampleCtn: [{ Example: [{ Fragment: ['keilak|ko, -an ~ -on. keilakko veneh'], RangeOfApplication: [{ $: { freeType: 'käyttöala', 'kotus:grouping': '8' }, _: 'harv.' }], _: '  (). ' }], FreeTopic: [{ $: { type: 'levikki' }, GeographicalUsage: [{ $: { class: 'pitäjä', freeType: 'pitäjä' }, _: 'Säämäj' }] }] }] }], GrammaticalNote: [{ $: { display: 'yes' }, _: 'a.' }], Headword: ['keilakko'], PartOfSpeechCtn: [{ PartOfSpeech: [{ $: { display: 'no', freeValue: 'a.', value: 'adjective' } }] }], SearchForm: ['keilakko'],
+      Headword: [
+        'keilakko',
+      ],
+      SearchForm: [
+        'keilakko',
+      ],
+      PartOfSpeechCtn: [
+        {
+          PartOfSpeech: [
+            {
+              display: [
+                'no',
+              ],
+              freeValue: [
+                'a.',
+              ],
+              value: [
+                'adjective',
+              ],
+            },
+          ],
+        },
+      ],
+      GrammaticalNote: [
+        {
+          _: 'a.',
+          display: [
+            'yes',
+          ],
+        },
+      ],
+      Definition: [
+        'kiikkerä.',
+      ],
+      ExampleBlock: [
+        {
+          ExampleCtn: [
+            {
+              Example: [
+                {
+                  _: '  (). ',
+                  Fragment: [
+                    'keilak|ko, -an ~ -on. keilakko veneh',
+                  ],
+                  RangeOfApplication: [
+                    {
+                      _: 'harv.',
+                      $: {
+                        freeType: 'käyttöala',
+                        'kotus:grouping': '8',
+                      },
+                    },
+                  ],
+                },
+              ],
+              FreeTopic: [
+                {
+                  $: {
+                    type: 'levikki',
+                  },
+                  GeographicalUsage: [
+                    {
+                      _: 'Säämäj',
+                      $: {
+                        freeType: 'pitäjä',
+                        class: 'pitäjä',
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
     };
 
     expect(result).toEqual(expected);

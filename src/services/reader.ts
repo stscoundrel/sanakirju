@@ -16,7 +16,7 @@ const getFileContent = async (filePath: string) => {
  * Get words from file content.
  */
 const getWords = async (content: Buffer) : Promise<RawEntry[]> => {
-  const parser = new xml2js.Parser();
+  const parser = new xml2js.Parser({ mergeAttrs: true, preserveChildrenOrder: true });
 
   const data = await parser.parseStringPromise(content);
 
