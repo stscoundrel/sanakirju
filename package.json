@@ -42,6 +42,7 @@
     "fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test:unit": "jest tests/unit --verbose --passWithNoTests",
     "test:integration": "jest tests/integration --verbose --passWithNoTests",
+    "test:build": "jest tests/build --verbose --passWithNoTests",
     "build": "tsc",
     "prepublishOnly": "yarn build && yarn lint && yarn test:unit && yarn test:integration"
   }
