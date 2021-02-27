@@ -1,4 +1,4 @@
 import sanakirju from '../../dist';
-import sanakirjuTests from '../integration/sanakirju.test.ts';
+import sanakirjuIntegrationTests from '../integration/sanakirju-integration.ts';
 
-sanakirjuTests(sanakirju);
+sanakirjuIntegrationTests(sanakirju);
