@@ -1,4 +1,4 @@
-import { getDefinitions, getDefinition } from '../../../src/services/definitions';
+import definitionService, { getDefinitions, getDefinition } from '../../../src/services/definitions';
 import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Definition service', () => {
@@ -55,5 +55,10 @@ describe('Definition service', () => {
     ];
 
     expect(result).toEqual(expected);
+  });
+
+  test('Default export works', async () => {
+    expect(definitionService.getDefinitions).toEqual(getDefinitions);
+    expect(definitionService.getDefinition).toEqual(getDefinition);
   });
 });

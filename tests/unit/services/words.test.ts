@@ -1,10 +1,10 @@
-import { formatEntry, formatEntries } from '../../../src/services/words';
+import wordService from '../../../src/services/words';
 import { entryFixture, entryFixtureMultipleMeanings, thirdEntry } from '../fixtures/entry-fixtures.ts';
 
 describe('Word service', () => {
   test('Formats individual entries', async () => {
-    const result1 = formatEntry(entryFixture);
-    const result2 = formatEntry(thirdEntry);
+    const result1 = wordService.formatEntry(entryFixture);
+    const result2 = wordService.formatEntry(thirdEntry);
 
     const expected1 = {
       word: 'keilakko',
@@ -43,7 +43,7 @@ describe('Word service', () => {
   });
 
   test('Formats a multiple meaning entry.', async () => {
-    const result = formatEntries([entryFixtureMultipleMeanings]);
+    const result = wordService.formatEntries([entryFixtureMultipleMeanings]);
 
     const expected = [
       {
@@ -73,7 +73,9 @@ describe('Word service', () => {
   });
 
   test('Formats an array of entries.', async () => {
-    const result = formatEntries([entryFixture, entryFixtureMultipleMeanings, thirdEntry]);
+    const result = wordService.formatEntries(
+      [entryFixture, entryFixtureMultipleMeanings, thirdEntry],
+    );
 
     const expected = [
       {
