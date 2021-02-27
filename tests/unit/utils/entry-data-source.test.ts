@@ -1,9 +1,9 @@
-import { getEntryDataSource } from '../../../src/utils/entry-data-source';
+import entryDataSourceUtil from '../../../src/utils/entry-data-source';
 import { entryFixture, entryFixtureMultipleMeanings } from '../fixtures/entry-fixtures.ts';
 
 describe('Utils: entry data soruce', () => {
   test('Gets data source from an ordinary entry.', async () => {
-    const result = getEntryDataSource(entryFixture);
+    const result = entryDataSourceUtil.getEntryDataSource(entryFixture);
 
     const expected = {
       Headword: [
@@ -88,7 +88,7 @@ describe('Utils: entry data soruce', () => {
 
   test('Gets data source from a multipurpose, partial entry.', async () => {
     const partialEntry = entryFixtureMultipleMeanings.SenseGrp[0];
-    const result = getEntryDataSource(partialEntry);
+    const result = entryDataSourceUtil.getEntryDataSource(partialEntry);
 
     const expected = {
       $: {

@@ -13,6 +13,15 @@ describe('Examples service', () => {
     expect(result).toEqual(expected);
   });
 
+  test('Returns empty array if entry is malformatted', async () => {
+    const entry = { ...entryFixture };
+    entry.HeadwordCtn[0].ExampleBlock = undefined;
+
+    const result = await exampleService.getExamples(entry);
+
+    expect(result).toEqual([]);
+  });
+
   test('Returns empty array if no examples in entry', async () => {
     const entry = { ...entryFixture };
     entry.HeadwordCtn[0].ExampleBlock = [];
