@@ -1,4 +1,4 @@
-name: TyoeScript - Build
+name: TypeScript - Build
 
 on: [pull_request]
 
