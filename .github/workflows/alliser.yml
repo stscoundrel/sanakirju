@@ -1,0 +1,15 @@
+name: Alliser
+
+on: [pull_request]
+
+jobs:
+  alliser:
+    runs-on: ubuntu-latest
+    name: Check file types
+    steps:
+    - uses: actions/checkout@v2
+    - uses: stscoundrel/alliser-action@v0.6.1
+      name: Alliser action step
+      with:
+        extensions: .ts,.snap
+        folders: src,tests
