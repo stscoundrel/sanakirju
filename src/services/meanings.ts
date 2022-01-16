@@ -45,14 +45,14 @@ export const getMeaning = (entry: RawEntry) : string => {
 
   if (hasProperty(data, 'Definition')) {
     if (hasProperty(data.Definition[0], '_')) {
-      return data.Definition[0]._;
+      return data.Definition[0]._.trim();
     }
 
     if (hasProperty(data.Definition[0], 'SeeAlso')) {
       const type = data.Definition[0].SeeAlso[0].style;
       const ref = data.Definition[0].SeeAlso[0].Ptr[0]._;
 
-      return `${type} ${ref}`;
+      return `${type} ${ref}`.trim();
     }
 
     if (typeof data.Definition[0] !== 'string') {
@@ -60,10 +60,10 @@ export const getMeaning = (entry: RawEntry) : string => {
        * Definition is split to ridiculous pieces.
        * Combine like examples.
        */
-      return formatDefinition(data.Definition[0]);
+      return formatDefinition(data.Definition[0]).trim();
     }
 
-    return data.Definition[0];
+    return data.Definition[0].trim();
   }
 
   return '';
