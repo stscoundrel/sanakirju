@@ -42,7 +42,7 @@ describe('Examples service', () => {
 
   test('Formats complex example', async () => {
     const example = complexExampleFixture;
-    const expected = "jo heän onkija typyttelöyve nenäšš‿on utusen ńiemen, peäššäkö šoaren terhellisen,Lämmitä kyly utuni, Pian pirtti riuottele,Kussakk' on utuni vyöllä Kesä uuhen uujuloista";
+    const expected = "jo heän onkija typyttelöyve nenäšš‿on utusen ńiemen, peäššäkö šoaren terhellisen. Lämmitä kyly utuni, Pian pirtti riuottele. Kussakk' on utuni vyöllä Kesä uuhen uujuloista";
 
     const result = await exampleService.formatExample(example);
 
