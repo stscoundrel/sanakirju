@@ -1,4 +1,5 @@
 import sanakirjuModule from '../../src';
+import definitions from '../../src/services/definitions';
 
 const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => {
   describe('Dictionary tests', () => {
@@ -54,6 +55,17 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
       };
 
       expect(entry).toEqual(expected);
+    });
+
+    test('Dictionary entries do not contain malformatted data', async () => {
+      const result = await sanakirju.fromXML();
+
+      result.forEach((entry) => {
+        entry.definitions.forEach((definition) => {
+          expect(definition.definition).not.toContain('[object Object]')
+          expect(definition.examples).not.toContain('[object Object]')
+        })
+      })
     });
   });
 };
