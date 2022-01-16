@@ -6,20 +6,32 @@ import { RawExampleBlock, RawExample, RawEntry } from '../interfaces/raw-entries
  * Examples come in many xml pieces.
  * Combine them to reasonable string.
  */
-export const formatExample = (example: RawExample): string => {
-  let exampleString = '';
+export const formatExample = (example: RawExample): string | null => {
+  const exampleParts: string[] = [];
   const exampleArray: [string, Record<string, unknown>][] = Object.entries(example);
 
   // eslint-disable-next-line no-restricted-syntax
   for (const [key, value] of exampleArray) {
-    if (key !== 'RangeOfApplication' && key !== 'GeographicalUsage') {
-      if (typeof value !== 'string') {
-        exampleString = `${exampleString} ${value}`;
+    if (key === 'Fragment') {
+      if (Array.isArray(value)) {
+        value.forEach((subValue) => {
+          if (typeof subValue === 'string') {
+            exampleParts.push(subValue);
+          } else {
+            exampleParts.push(subValue._);
+          }
+        });
       }
     }
   }
 
-  return exampleString.trim();
+  const examples = exampleParts.filter((part) => part.length > 0).join('. ');
+
+  if (examples.length > 0) {
+    return examples;
+  }
+
+  return null;
 };
 
 /**
@@ -37,7 +49,11 @@ export const getExamples = (entry: RawEntry): string[] => {
        */
       data.ExampleBlock.forEach((exampleData: RawExampleBlock) => {
         exampleData.ExampleCtn.forEach((example) => {
-          examples.push(formatExample(example.Example[0]));
+          const formattedExample = formatExample(example.Example[0]);
+
+          if (formattedExample) {
+            examples.push(formattedExample);
+          }
         });
       });
 
