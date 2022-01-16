@@ -65,6 +65,15 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
         });
       });
     });
+
+    test('Dictionary entry definitions do not contain malformatted data', async () => {
+      const result = await sanakirju.fromXML();
+
+      result.forEach((entry) => entry.definitions.forEach((definition) => {
+        expect(definition.definition).not.toBeNull();
+        expect(definition.definition).not.toEqual('[object Object]');
+      }));
+    });
   });
 };
 
