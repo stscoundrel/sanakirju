@@ -7,12 +7,12 @@ Array [
       Object {
         "definition": "mutta.",
         "examples": Array [
-          "mie smiet́il,lähtie järvie kylpömäh, a mi ollou kivellä: peätä šukiu, pität hivukšet; mie pöläššyin ta juoksim poikeš",
-          "myö aina šanoma jotta ńiin ois kauńis tuo poika, a kun ov värttšipukšut,jalašša!",
-          "hod,oĺiz alemboanda,katennun, a katkei yläheändä. ńe,on šuuret konža ku hyvin kažvau, a toittši hienod on",
+          "mie smiet́il. lähtie järvie kylpömäh, a mi ollou kivellä: peätä šukiu, pität hivukšet; mie pöläššyin ta juoksim poikeš",
+          "myö aina šanoma jotta ńiin ois kauńis tuo poika, a kun ov värttšipukšut. jalašša!",
+          "hod. oĺiz alemboanda. katennun, a katkei yläheändä. ńe. on šuuret konža ku hyvin kažvau, a toittši hienod on",
           "Vuotimma, a ei tuldu",
           "vahnembua kutšuttih Peškakši, a keskimmäistä Vaśkakši",
-          "Pellon veriän salbuat, a mieron suuda ed voi salvata,Kissal kiža, a hiirel tozi",
+          "Pellon veriän salbuat, a mieron suuda ed voi salvata. Kissal kiža, a hiirel tozi",
           "Lähet pyydy pyydämäh, a koppelo kois kaduobi",
           "yhten izän aloveh ollah lapsed a tost‿emeä",
         ],
@@ -28,13 +28,13 @@ Array [
           "a mitä šiula pitäy",
           "a mih lienöö männyt?",
           "a kui sie tule et? a sie sen gounalańi",
-          "a kunnebo häi meńi,a häi, midäbo häi rubieu ruadamah",
+          "a kunnebo häi meńi. a häi, midäbo häi rubieu ruadamah",
           "a rod́ih vägi aunaine, kaheksasadoa (liyhtehty) on. (nu, midä sinä duumitšed, k‿ed virk̀a ni midä?) a ńi midä. a k‿et tule, kielastad?",
-          "a voi,a voi! a voivoi!",
+          "a voi. a voi! a voivoi!",
           "a voi voistańi! a voi voisieńi!",
           "a voi voistańi, biesa tuĺi nagrižmoalla!",
           "a voi voi!",
-          "a voivoi, seittšekymmen rubĺua rod́ih roskodua,täl vuvvel!",
+          "a voivoi, seittšekymmen rubĺua rod́ih roskodua. täl vuvvel!",
           "a voi syöttäi sinä, kui sinä minuu hyvitid avutit kaikelleh! a voivoi jupkaizilleh oĺin toizenkyläläizem muškan aigah! avoivoidu kirguu",
         ],
         "grammaticalNote": "interj.",
@@ -45,9 +45,8 @@ Array [
       Object {
         "definition": " . ",
         "examples": Array [
-          "a to,kuim miul yh́t́eh yöh rozbeŕie kolme ĺeib́iä eŕis, a to huomeneksella ŕiputetah ṕetĺah",
-          "a ńi mi ei,se mužikku meńi ańimiks,enämb‿ei voi keändyö (eländäh päi). torrud,mendih ańimiks,jäi ańiminkel,mendih elot kai. se lähti ańiminkel",
-          "[object Object]",
+          "a to. kuim miul yh́t́eh yöh rozbeŕie kolme ĺeib́iä eŕis, a to huomeneksella ŕiputetah ṕetĺah",
+          "a ńi mi ei. se mužikku meńi ańimiks. enämb‿ei voi keändyö (eländäh päi). torrud. mendih ańimiks. jäi ańiminkel. mendih elot kai. se lähti ańiminkel",
         ],
         "grammaticalNote": null,
         "type": Array [],
@@ -81,7 +80,7 @@ Array [
         "examples": Array [
           "aa aa piendä lasta!",
           "aa aa piendy lastu, baaji baaji pikkarastu",
-          "aĺĺi,sanoo ittšiedäh: aa aa aa",
+          "aĺĺi. sanoo ittšiedäh: aa aa aa",
         ],
         "grammaticalNote": "interj.",
         "type": Array [
@@ -112,7 +111,7 @@ Array [
         "definition": "",
         "examples": Array [
           "aaloi",
-          "aaloita,otin koššokš",
+          "aaloita. otin koššokš",
           "še on voalie, še väri on aaloi, ei ole ruškie, ei ole valgie, voalie väri še on; venöähen kielellä ku šanou še on beeloi",
         ],
         "grammaticalNote": "s. ja a.",
@@ -219,16 +218,16 @@ Array [
           "ahaš",
           "ylen ahtahad oved ollah",
           "ei ńi ahaš kengä ole hyvä olomašša",
-          ",t́ähä sormee oĺi ahaš",
+          "t́ähä sormee oĺi ahaš",
           "kengät on ahtahat",
           "ahas hengi (kui hengi ahtahašt́i kävyy)",
           "paida ahaš. eĺä ošš(a) ahtahie pinžakkoida, narovi v́äĺĺemb́äzie!",
           "hiän luad́i ahtahan peńdžakan",
           "ahaš pinžakka",
           "Mi leibiä se mahas, eiga ole suońil ahas",
-          "Mis yksin ahas, siin kahen paras,ahtahat tuldih kengäd",
+          "Mis yksin ahas, siin kahen paras. ahtahat tuldih kengäd",
           "ahtaz",
-          "kui olloo neng‿ahtas mökki laittu, eihän tänne put́illeh synny,ńi viitty hengee maata, pert́t́i on ahtas elää",
+          "kui olloo neng‿ahtas mökki laittu, eihän tänne put́illeh synny. ńi viitty hengee maata, pert́t́i on ahtas elää",
           "ylen oĺ‿ahtas kiriköz. ahtahad jallatšid",
         ],
         "grammaticalNote": null,
@@ -238,7 +237,7 @@ Array [
         "definition": "vaikea, tukala.",
         "examples": Array [
           "nygöi on ahaz aiga miul elettävännä, kui puutuit pahah rahvahah",
-          "mie oĺin ahakšešša,ylen",
+          "mie oĺin ahakšešša. ylen",
           "kengäz da kaikez d́ieloz on ahtaz eleä. sen Jumal andoi ahtahan eloksen, ed mid‿auta",
         ],
         "grammaticalNote": null,
@@ -314,8 +313,8 @@ Array [
         "examples": Array [
           "šemmoińi on ahava tuuĺi pihalla jotta kai ńeńöä veäräh veärist́äy",
           "eglen oĺi ah(a)va sɛɛ",
-          "ah(a)va tuuĺi om puolešta päiv́äšt́ä,ylen ahava tuuĺi tämṕiäńä",
-          "tämpyän tuuĺ,ahava",
+          "ah(a)va tuuĺi om puolešta päiv́äšt́ä. ylen ahava tuuĺi tämṕiäńä",
+          "tämpyän tuuĺ. ahava",
           "ei sua ruadoa ahaval siäl",
           "tuulou ahavašt́i",
           "ahavast́i",
@@ -380,7 +379,7 @@ Array [
         "definition": "",
         "examples": Array [
           "ahvakala",
-          "ahvakala,rassiloihin",
+          "ahvakala. rassiloihin",
         ],
         "grammaticalNote": "s.",
         "type": Array [
@@ -625,7 +624,7 @@ Array [
           "ahavoija ~ ahvoija. pidää nostua ĺihad ahvoimah",
           "d́ogo kalad ahvoitšitto? otammo kyhlähis piäd iär, anna häi ahavoittšov vähäzel ladvad",
           "ahavojja",
-          "ĺiha kevätpuoleh putšispäi otetah rassaĺiz,eäreh, nostetah räystähäs suurih pakkaizih; ku pakkaine purou da sit päivy ahavoittšou, voibi syvvä i keittämättäh. ahavoitud ĺihad,ahavoitud ollah jo, kuivanuod,moan tänäpäi hyvin ahavoittši, kylveä voibi",
+          "ĺiha kevätpuoleh putšispäi otetah rassaĺiz. eäreh, nostetah räystähäs suurih pakkaizih; ku pakkaine purou da sit päivy ahavoittšou, voibi syvvä i keittämättäh. ahavoitud ĺihad. ahavoitud ollah jo, kuivanuod. moan tänäpäi hyvin ahavoittši, kylveä voibi",
           "pidää kalat ahvojja",
           "ahavoittu liha, kala",
         ],
@@ -638,11 +637,10 @@ Array [
         "definition": "sierettää (iho, kasvot).",
         "examples": Array [
           "tuuĺi ahavoittšou ińehmisen. šuupuolet on ahavoinun",
-          "",
           "ryst́yöt ah(a)voittši",
           "rožat, käed ahvoittši tänäpeän, kai käet katkieloo",
           "tuulessa ḱäv́eĺiin i ahvoittši huulet, ässen ḱib́euv́yt́t́ih",
-          ",ahvoittšoo",
+          "ahvoittšoo",
           "ahavoittši, kai verel mendih huuled da iho",
         ],
         "grammaticalNote": null,
@@ -841,7 +839,7 @@ Array [
       Object {
         "definition": "törmä, rinne.",
         "examples": Array [
-          "luoko kuivau,ahtiešša. tuo Šoarirannan heińikkö on nyt parahašša ahtiešša,ńiitämmä pois šen kuivamah",
+          "luoko kuivau. ahtiešša. tuo Šoarirannan heińikkö on nyt parahašša ahtiešša. ńiitämmä pois šen kuivamah",
         ],
         "grammaticalNote": "s.",
         "type": Array [
@@ -921,7 +919,7 @@ Array [
       Object {
         "definition": "",
         "examples": Array [
-          "ahinkoveteh,verkot lašetah",
+          "ahinkoveteh. verkot lašetah",
         ],
         "grammaticalNote": "s.",
         "type": Array [
@@ -1008,7 +1006,7 @@ Array [
       Object {
         "definition": "synonyymi = ahinpartiaine.",
         "examples": Array [
-          "ahimpardized ollah štob‿ei,lagoh mäńiz",
+          "ahimpardized ollah štob‿ei. lagoh mäńiz",
           "ahtimpardized ollah kiińi, parret siirettäväd",
           "ahtimpardiine",
         ],
@@ -1043,7 +1041,7 @@ Array [
         "examples": Array [
           "ruvetah häntä ahistelomah",
           "ahisseldih, ahisseldih, a siidä puuh kavahti",
-          "ei rubiez riittšimäh,akad ahtistellah",
+          "ei rubiez riittšimäh. akad ahtistellah",
           "aivim minuudań‿ahtistelou, peäst‿ei ńi hengelleh (hengi lähtemäh ruvekkah, ńi ei peästä)",
           "koiru ahtisteli d́änöidy, toĺko ei saanuh",
         ],
@@ -1060,7 +1058,7 @@ Array [
       Object {
         "definition": "kanta → ahissella.",
         "examples": Array [
-          "joga kohtah ahtisteleh,menöö",
+          "joga kohtah ahtisteleh. menöö",
         ],
         "grammaticalNote": "refl.v.",
         "type": Array [
@@ -1075,7 +1073,7 @@ Array [
       Object {
         "definition": "ahdas paikka.",
         "examples": Array [
-          "ei loitos peäze pagoh,soatam mie sen ahistelmukseh",
+          "ei loitos peäze pagoh. soatam mie sen ahistelmukseh",
           "ahtistelmukseh",
         ],
         "grammaticalNote": "s.",
@@ -1159,10 +1157,10 @@ Array [
           "kenkä ahistau kum pieńi on",
           "ušotko Poavila jotta kun tuošta reiještä kopristau ńin, henkie ahistau?",
           "ahistua",
-          "porrin,tširajau ku ahiššad ruoppahah",
+          "porrin. tširajau ku ahiššad ruoppahah",
           "hengie ahistaa",
-          "hebo pideä ahistoa aijankolk̆kah, äski soat kädeh hänen. pattie,gu olet, silma pideä aivin ahistoa roadoh! en voi ńi hengähteäkseh, muga ahistoa syväindä",
-          "Ei kukko kanua ahista,Ei suuri kengy jalgua ahista",
+          "hebo pideä ahistoa aijankolk̆kah, äski soat kädeh hänen. pattie. gu olet, silma pideä aivin ahistoa roadoh! en voi ńi hengähteäkseh, muga ahistoa syväindä",
+          "Ei kukko kanua ahista. Ei suuri kengy jalgua ahista",
           "hä(i) ahtisti minuu d́uomah",
           "kengy ahtistau. tšuppuh ahtistettih hebo nuoral, äski tavattih",
           "nämä kengät d́algaa ahtistaa",
@@ -1230,7 +1228,7 @@ Array [
           "ahjo",
           "vai täs pätšin ahjoz lämmitä puutui",
           "kui ahjo hoahtau roža",
-          "tšökkääldä vai ahd́oh, ga raviah bokku,hiilduu",
+          "tšökkääldä vai ahd́oh, ga raviah bokku. hiilduu",
           "ahjo",
         ],
         "grammaticalNote": null,
@@ -1368,7 +1366,7 @@ Array [
       Object {
         "definition": " valitella, päivitellä, sanoa . ",
         "examples": Array [
-          "elä ahkoaĺiet́e muuta kum mäne männeššäš; et sie onnakko ole Poanarvem pata jotta murenet!,ahkoaĺĺattši",
+          "elä ahkoaĺiet́e muuta kum mäne männeššäš; et sie onnakko ole Poanarvem pata jotta murenet!. ahkoaĺĺattši",
           "mid́ä ahkoalietet, pillago rod́ii?",
         ],
         "grammaticalNote": "refl.v.",
@@ -1478,7 +1476,7 @@ Array [
         "definition": "kanta → ahkera.",
         "examples": Array [
           "ahkeruš",
-          "yhen ahkeruoh,roatah",
+          "yhen ahkeruoh. roatah",
         ],
         "grammaticalNote": "s. ja a.",
         "type": Array [
@@ -1495,7 +1493,7 @@ Array [
         "definition": "ahkio, pulkka.",
         "examples": Array [
           "ahkivo",
-          "ahkivom pohjapuu (,emäpuu) loajitah lylykšeštä, a listiet männyštä",
+          "ahkivom pohjapuu (. emäpuu) loajitah lylykšeštä, a listiet männyštä",
           "kahella ńimellä kutšuttih: ahkivo ja pulkka",
           "šukšilla pitäis matata, hirvi ta puoli hirvie pannah ahkivoh – šiitä vejä! ahkivošša vejetäh ńiitä lihoja; petrallihat panet ta kahen henkev vejät, šukšilla kulet",
           "ahkivo",
@@ -1577,11 +1575,11 @@ Array [
       Object {
         "definition": "sakka, kuona, jätteet.",
         "examples": Array [
-          "makšoja merutah,ahkut",
+          "makšoja merutah. ahkut",
           "kiisselie kun keitit ńin ahkut ne jeätih. marjoa keität ta šiiloat, ne on ahkut. ahku",
           "šiitä koatah še šula rašva pois ta šiitä jeäy ne ahkut, ńi še on tšiitaluo",
           "marjoista jiätih vai ahkut",
-          "siemenveen ahkut. koufin ahkut. ei ole selgie,ahkuo tuloo",
+          "siemenveen ahkut. koufin ahkut. ei ole selgie. ahkuo tuloo",
           "ahkut",
           "ku voim peästäy ĺiinansiemeńis, se on ahku. voasan, koufein ahkud. ahkut pidäy juottoa žiivatoil eäreh",
         ],
@@ -1593,7 +1591,6 @@ Array [
         "examples": Array [
           "ahkud valuttih",
           "on sil miehel ahkuu piäz",
-          "[object Object]",
         ],
         "grammaticalNote": "s. ",
         "type": Array [
@@ -1698,7 +1695,7 @@ Array [
       Object {
         "definition": "englantilainen.",
         "examples": Array [
-          "syöt kui ahĺei huolitad,ed vuota muida",
+          "syöt kui ahĺei huolitad. ed vuota muida",
         ],
         "grammaticalNote": "s.",
         "type": Array [
@@ -1755,11 +1752,11 @@ Array [
       Object {
         "definition": "englantilainen, englannin-.",
         "examples": Array [
-          "ahliskoi,ruškie hyvin ta kirjat pyöriet",
+          "ahliskoi. ruškie hyvin ta kirjat pyöriet",
           "ahliskoi",
-          "ahĺitško,rättšinän hiemat on ahĺitškošta ta emušta aivinoa. loajin koššon ahĺitškošta",
-          "ahĺeiskoi ~ agĺeiskoi,~ ahĺeittša,~ agĺeittša,~ aglettšina,ahĺeiskoi (~ ahĺein) vägi. agĺeiskoi ongi. agĺeiskoit ~ ahĺeitšat saldatat",
-          "ahleskoi ~ agleskoi ~ agletskoi ~ agĺitskoi ~ agĺitšan. ahleskoi ńieglu. agletskoi koroĺi. agletskoi avain,agĺitskoi tširp̆pi",
+          "ahĺitško. rättšinän hiemat on ahĺitškošta ta emušta aivinoa. loajin koššon ahĺitškošta",
+          "ahĺeiskoi ~ agĺeiskoi. ~ ahĺeittša. ~ agĺeittša. ~ aglettšina. ahĺeiskoi (~ ahĺein) vägi. agĺeiskoi ongi. agĺeiskoit ~ ahĺeitšat saldatat",
+          "ahleskoi ~ agleskoi ~ agletskoi ~ agĺitskoi ~ agĺitšan. ahleskoi ńieglu. agletskoi koroĺi. agletskoi avain. agĺitskoi tširp̆pi",
           "ahleskoi",
         ],
         "grammaticalNote": "s. ja a.",
@@ -1776,9 +1773,9 @@ Array [
       Object {
         "definition": "kanta → ahliskoi.",
         "examples": Array [
-          "ahliskoińi siittša,Šunkušta tuotih ahliskoisie siittšoja",
+          "ahliskoińi siittša. Šunkušta tuotih ahliskoisie siittšoja",
           "ahliskoińi siittša",
-          "ahĺiskoińi,ahĺiskoińi siittša,hiemat oli – – še oli siitšašta, ahliskoisešta. ahĺiskoińi onki",
+          "ahĺiskoińi. ahĺiskoińi siittša. hiemat oli – – še oli siitšašta, ahliskoisešta. ahĺiskoińi onki",
           "ahĺitškoińi košto",
           "ahleskoińe",
           "ahlitškoińi",
