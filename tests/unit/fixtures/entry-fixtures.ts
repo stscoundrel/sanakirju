@@ -39,21 +39,7 @@ export const entryFixture = {
           ExampleCtn: [
             {
               Example: [
-                {
-                  _: '  (). ',
-                  Fragment: [
-                    'keilak|ko, -an ~ -on. keilakko veneh',
-                  ],
-                  RangeOfApplication: [
-                    {
-                      _: 'harv.',
-                      $: {
-                        freeType: 'käyttöala',
-                        'kotus:grouping': '8',
-                      },
-                    },
-                  ],
-                },
+                ' keilak|ko, -an ~ -on. keilakko veneh (harv.). ',
               ],
               FreeTopic: [
                 {
@@ -127,12 +113,7 @@ export const entryFixtureMultipleMeanings = {
           ExampleCtn: [
             {
               Example: [
-                {
-                  _: ' . ',
-                  Fragment: [
-                    'kekettämällä nakroa. nakroa kekettöä. kekettäy nakroa',
-                  ],
-                },
+                'kekettämällä nakroa. nakroa kekettöä. kekettäy nakroa',
               ],
               FreeTopic: [
                 {
@@ -167,12 +148,7 @@ export const entryFixtureMultipleMeanings = {
           ExampleCtn: [
             {
               Example: [
-                {
-                  _: '  siellä olla kököttää. ',
-                  Fragment: [
-                    '(midä kuuluu?) kuuluu kurjua, nägyy ńälgiä, vilu selläs, ńälgä mahas, itše keskel keketän. siel kekettää',
-                  ],
-                },
+                ' (midä kuuluu?) kuuluu kurjua, nägyy ńälgiä, vilu selläs, ńälgä mahas, itše keskel keketän. siel kekettää siellä olla kököttää. ',
               ],
               FreeTopic: [
                 {
@@ -264,11 +240,7 @@ export const thirdEntry = {
           ExampleCtn: [
             {
               Example: [
-                {
-                  Fragment: [
-                    'kirgai öngähytti.',
-                  ],
-                },
+                'kirgai öngähytti.',
               ],
               FreeTopic: [
                 {

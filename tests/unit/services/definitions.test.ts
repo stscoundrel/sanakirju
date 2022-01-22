@@ -9,7 +9,7 @@ describe('Definition service', () => {
     const expected1 = {
       definition: 'kiikkerä.',
       examples: [
-        'keilak|ko, -an ~ -on. keilakko veneh',
+        'keilak|ko, -an ~ -on. keilakko veneh (harv.).',
       ],
       grammaticalNote: 'a.',
       type: [
@@ -49,7 +49,7 @@ describe('Definition service', () => {
         type: [],
         grammaticalNote: null,
         examples: [
-          '(midä kuuluu?) kuuluu kurjua, nägyy ńälgiä, vilu selläs, ńälgä mahas, itše keskel keketän. siel kekettää',
+          '(midä kuuluu?) kuuluu kurjua, nägyy ńälgiä, vilu selläs, ńälgä mahas, itše keskel keketän. siel kekettää siellä olla kököttää.',
         ],
       },
     ];

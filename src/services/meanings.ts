@@ -4,7 +4,7 @@ import { getEntryDataSource } from '../utils/entry-data-source';
 // Type definitions.
 import { RawEntry } from '../interfaces/raw-entries';
 
-const DISALLOWED_DEFINITION_KEYS = ['RangeOfApplication', 'GeographicalUsage', 'PartOfSpeechCtn'];
+const DISALLOWED_DEFINITION_KEYS = ['GeographicalUsage', 'PartOfSpeechCtn'];
 
 /**
  * Check if entry has multiple definitions.
