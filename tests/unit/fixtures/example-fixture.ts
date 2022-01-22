@@ -1,19 +1,22 @@
-export const simpleExampleFixture = {
-  _: '  pelkää. ',
-  Fragment: [
-    'em minä händy hykä ylen äjjäl, engo händy varoa',
-  ],
-};
+export const simpleExampleFixture = ' em minä händy hykä ylen äjjäl, engo händy varoa pelkää. ';
 
 export const complexExampleFixture = {
-  _: ' ().  .  . ',
-  Fragment: [
-    'jo heän onkija typyttelöyve nenäšš‿on utusen ńiemen, peäššäkö šoaren terhellisen',
-    'Lämmitä kyly utuni, Pian pirtti riuottele',
-    "Kussakk' on utuni vyöllä Kesä uuhen uujuloista",
+  _: ' Ruma Ruotus paitulainen Syöpiy juopi pöyän päässä, Päässä pöyän paiallaan, Aivin aivinaisillaan . ',
+  GeographicalUsage: [
+    {
+      _: '(SKVR I 759)',
+      freeType: [
+        'lähde',
+      ],
+      class: [
+        'lähde',
+      ],
+      sub: [
+        '2',
+      ],
+    },
   ],
 };
-
 export default {
   simpleExampleFixture,
   complexExampleFixture,

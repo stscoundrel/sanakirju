@@ -20,9 +20,9 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
             type: [],
             grammaticalNote: null,
             examples: [
-              'ehotti piimöäh miula šyyvä',
-              'sie ehoitettih kaikkie luaduu',
-              'minä hänel ehoitin kaikkee syömisty, a häi yksikai ńi midä ei syönyh',
+              'ehotti piimöäh miula šyyvä.',
+              'sie ehoitettih kaikkie luaduu.',
+              'minä hänel ehoitin kaikkee syömisty, a häi yksikai ńi midä ei syönyh.',
             ],
           },
           {
@@ -30,7 +30,7 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
             type: [],
             grammaticalNote: null,
             examples: [
-              'häi minule tädä luaduu ehoitti pluat́jan',
+              'häi minule tädä luaduu ehoitti pluat́jan (vanh., harv.).',
             ],
           },
           {
@@ -38,7 +38,7 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
             type: [],
             grammaticalNote: null,
             examples: [
-              'milma ku ehoittoa, ei sidä syömistä lasse',
+              'milma ku ehoittoa, ei sidä syömistä lasse.',
             ],
           },
           {
@@ -46,8 +46,8 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
             type: [],
             grammaticalNote: null,
             examples: [
-              'ehottoa',
-              'ehottua',
+              'ehottoa.',
+              'ehottua.',
             ],
           },
         ],

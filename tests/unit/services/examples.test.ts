@@ -5,7 +5,7 @@ import { simpleExampleFixture, complexExampleFixture } from '../fixtures/example
 describe('Examples service', () => {
   test('Gets examples from entry', async () => {
     const expected = [
-      'keilak|ko, -an ~ -on. keilakko veneh',
+      'keilak|ko, -an ~ -on. keilakko veneh (harv.).',
     ];
 
     const result = await exampleService.getExamples(entryFixture);
@@ -33,7 +33,7 @@ describe('Examples service', () => {
 
   test('Formats simple example', async () => {
     const example = simpleExampleFixture;
-    const expected = 'em minä händy hykä ylen äjjäl, engo händy varoa';
+    const expected = 'em minä händy hykä ylen äjjäl, engo händy varoa pelkää.';
 
     const result = await exampleService.formatExample(example);
 
@@ -42,7 +42,7 @@ describe('Examples service', () => {
 
   test('Formats complex example', async () => {
     const example = complexExampleFixture;
-    const expected = "jo heän onkija typyttelöyve nenäšš‿on utusen ńiemen, peäššäkö šoaren terhellisen. Lämmitä kyly utuni, Pian pirtti riuottele. Kussakk' on utuni vyöllä Kesä uuhen uujuloista";
+    const expected = 'Ruma Ruotus paitulainen Syöpiy juopi pöyän päässä, Päässä pöyän paiallaan, Aivin aivinaisillaan.';
 
     const result = await exampleService.formatExample(example);
 

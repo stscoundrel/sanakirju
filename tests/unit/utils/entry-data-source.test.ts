@@ -45,21 +45,7 @@ describe('Utils: entry data soruce', () => {
           ExampleCtn: [
             {
               Example: [
-                {
-                  _: '  (). ',
-                  Fragment: [
-                    'keilak|ko, -an ~ -on. keilakko veneh',
-                  ],
-                  RangeOfApplication: [
-                    {
-                      _: 'harv.',
-                      $: {
-                        freeType: 'käyttöala',
-                        'kotus:grouping': '8',
-                      },
-                    },
-                  ],
-                },
+                ' keilak|ko, -an ~ -on. keilakko veneh (harv.). ',
               ],
               FreeTopic: [
                 {
@@ -102,12 +88,7 @@ describe('Utils: entry data soruce', () => {
           ExampleCtn: [
             {
               Example: [
-                {
-                  _: ' . ',
-                  Fragment: [
-                    'kekettämällä nakroa. nakroa kekettöä. kekettäy nakroa',
-                  ],
-                },
+                'kekettämällä nakroa. nakroa kekettöä. kekettäy nakroa',
               ],
               FreeTopic: [
                 {

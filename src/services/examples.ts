@@ -6,29 +6,36 @@ import { RawExampleBlock, RawExample, RawEntry } from '../interfaces/raw-entries
  * Examples come in many xml pieces.
  * Combine them to reasonable string.
  */
-export const formatExample = (example: RawExample): string | null => {
+export const formatExample = (example: string | RawExample): string | null => {
+  if (typeof example === 'string') {
+    return example.trim();
+  }
+
   const exampleParts: string[] = [];
   const exampleArray: [string, Record<string, unknown>][] = Object.entries(example);
 
   // eslint-disable-next-line no-restricted-syntax
   for (const [key, value] of exampleArray) {
-    if (key === 'Fragment') {
+    if (key !== 'GeographicalUsage') {
       if (Array.isArray(value)) {
         value.forEach((subValue) => {
           if (typeof subValue === 'string') {
-            exampleParts.push(subValue);
+            exampleParts.push(subValue.trim());
           } else {
-            exampleParts.push(subValue._);
+            exampleParts.push(subValue._.trim());
           }
         });
+      } else {
+        exampleParts.push(String(value).trim());
       }
     }
   }
 
-  const examples = exampleParts.filter((part) => part.length > 0).join('. ');
+  const examples = exampleParts.filter((part) => part.length > 1 && part.trim().length > 1).join('. ').trim();
 
   if (examples.length > 0) {
-    return examples;
+    // TODO: non spaghetti fix.
+    return examples.replace('. . ', '. ').replace(' .', '.').trim();
   }
 
   return null;
