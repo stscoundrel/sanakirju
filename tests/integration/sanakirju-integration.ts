@@ -8,6 +8,15 @@ const sanakirjuIntegrationTests = (sanakirju: typeof sanakirjuModule) : void => 
       expect(result.length).toEqual(88575);
     });
 
+    test('Each dictionary entry has a headword & some definition', async () => {
+      const result = await sanakirju.fromXML();
+
+      result.forEach((entry) => {
+        expect(entry.word.length > 0);
+        expect(entry.definitions.length > 0);
+      });
+    });
+
     test('An entry from dictionary is formatted expectedly.', async () => {
       const result = await sanakirju.fromXML();
       const entry = result[2011];
