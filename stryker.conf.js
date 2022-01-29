@@ -11,5 +11,5 @@ module.exports = {
   testRunner: 'jest',
   coverageAnalysis: 'perTest',
   tsconfigFile: 'tsconfig.json',
-  thresholds: { high: 85, low: 60, break: 69 },
+  thresholds: { high: 70, low: 50, break: 60 },
 };
